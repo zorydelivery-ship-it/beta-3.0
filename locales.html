@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Locales · Zori Delivery</title>
+  <meta name="theme-color" content="#F85800">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon-192.png">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="zori-app.css">
+</head>
+<body data-page="locales">
+  <div class="app">
+
+    <header class="zhero">
+      <div class="zhero-top">
+        <a class="zlogo" href="index.html" aria-label="Zori Delivery"><img src="logo png.png" alt="Zori"></a>
+        <div class="zloc-wrap">
+          <button class="zloc" id="btnUbicacion" type="button">
+            <small>Entregar en</small>
+            <b><span id="textoUbicacion">Ayolas</span> <i class="fa-solid fa-chevron-down"></i></b>
+          </button>
+          <div class="zdrop" id="dropdownUbicacion">
+            <div class="zdrop-h">Seleccioná tu ciudad</div>
+            <div class="zdrop-it on" onclick="cambiarUbicacion('Ayolas')"><span>Ayolas</span><i class="fa-solid fa-check"></i></div>
+            <div class="zdrop-it off"><span>Santiago</span><em>Pronto</em></div>
+            <div class="zdrop-it off"><span>San Ignacio</span><em>Pronto</em></div>
+            <div class="zdrop-it off"><span>San Juan</span><em>Pronto</em></div>
+          </div>
+        </div>
+      </div>
+      <label class="zsearch">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="search" id="search-input" placeholder="Buscar locales o comidas..." autocomplete="off" enterkeyhint="search">
+      </label>
+    </header>
+
+    <!-- Filtros por categoría (se arman solos desde la hoja) -->
+    <nav class="zchips" id="chips" aria-label="Categorías"></nav>
+
+    <div class="zsec-h"><h2 id="titulo-seccion">Locales disponibles</h2><span id="contador"></span></div>
+    <section class="zstores" id="stores-container"></section>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

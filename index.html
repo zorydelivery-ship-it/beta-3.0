@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Zori Delivery</title>
+  <meta name="theme-color" content="#F85800">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Zori">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon-192.png">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="zori-app.css">
+</head>
+<body data-page="home">
+  <div class="app">
+
+    <!-- Cabecera naranja: logo, ciudad y buscador -->
+    <header class="zhero">
+      <div class="zhero-top">
+        <a class="zlogo" href="index.html" aria-label="Zori Delivery"><img src="logo png.png" alt="Zori"></a>
+        <div class="zloc-wrap">
+          <button class="zloc" id="btnUbicacion" type="button">
+            <small>Entregar en</small>
+            <b><span id="textoUbicacion">Ayolas</span> <i class="fa-solid fa-chevron-down"></i></b>
+          </button>
+          <div class="zdrop" id="dropdownUbicacion">
+            <div class="zdrop-h">Seleccioná tu ciudad</div>
+            <div class="zdrop-it on" onclick="cambiarUbicacion('Ayolas')"><span>Ayolas</span><i class="fa-solid fa-check"></i></div>
+            <div class="zdrop-it off"><span>Santiago</span><em>Pronto</em></div>
+            <div class="zdrop-it off"><span>San Ignacio</span><em>Pronto</em></div>
+            <div class="zdrop-it off"><span>San Juan</span><em>Pronto</em></div>
+          </div>
+        </div>
+        <button class="zicon" id="btnInstalar" type="button" hidden aria-label="Instalar la app"><i class="fa-solid fa-download"></i></button>
+      </div>
+      <form class="zsearch" action="locales.html" method="get">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="search" name="q" placeholder="¿Qué se te antoja hoy?" autocomplete="off" enterkeyhint="search">
+      </form>
+    </header>
+
+    <!-- Categorías -->
+    <nav class="zquick" aria-label="Categorías">
+      <a href="locales.html?cat=restaurantes"><div class="ic"><img src="hamnburguesa-8.png" alt=""></div><span>Restaurantes</span></a>
+      <a href="supermercados.html"><div class="ic"><img src="supermercado-8.png" alt=""></div><span>Supermercados</span></a>
+      <a href="en constuccion.html"><div class="ic"><img src="postres-8.png" alt=""></div><span>Postres</span></a>
+      <a href="bodega.html"><div class="ic"><img src="bodega-8.png" alt=""></div><span>Bodega</span></a>
+      <a href="Farmacias.html"><div class="ic"><img src="farmacia-8.png" alt=""></div><span>Farmacia</span></a>
+      <a href="en constuccion.html"><div class="ic"><img src="varios-8.png" alt=""></div><span>Varios</span></a>
+    </nav>
+
+    <!-- Promos -->
+    <section class="zpromos" aria-label="Promociones">
+      <a class="zpromo" href="locales.html">
+        <h3>Tu antojo, a tu puerta</h3>
+        <p>Pedí en tus locales favoritos de Ayolas.</p>
+        <span class="go">Pedir ahora</span>
+        <img src="logo png.png" alt="">
+      </a>
+      <a class="zpromo dark" href="ruleta.html">
+        <h3>¡Girá la ruleta!</h3>
+        <p>Probá tu suerte y ganá premios.</p>
+        <span class="go">Jugar</span>
+        <img src="logo png.png" alt="">
+      </a>
+      <a class="zpromo soft" href="https://wa.me/595982309464" target="_blank" rel="noopener">
+        <h3>¿Tenés un local? Sumate</h3>
+        <p>Vendé con Zori Delivery.</p>
+        <span class="go">Escribinos</span>
+        <img src="logo png.png" alt="">
+      </a>
+    </section>
+
+    <!-- Destacados (se arma solo desde tu Google Sheets) -->
+    <div class="zsec-h"><h2 id="featTitle">Los más pedidos 🔥</h2><a href="locales.html">Ver todos</a></div>
+    <section class="zfeat" id="featured"></section>
+
+    <!-- Locales -->
+    <div class="zsec-h"><h2>Locales en Ayolas</h2></div>
+    <section class="zstores" id="storesHome"></section>
+    <a class="zbtn-more" id="verTodos" href="locales.html" hidden>Ver todos los locales</a>
+
+    <div class="zfoot">
+      <div class="social-icons">
+        <a href="https://www.facebook.com/share/19Axc55VUv/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/zoridelivery?igsh=MXFobTh4amJndnNyeQ%3D%3D&utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://wa.me/595982309464" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+      <div class="credits">Desarrollado por <span>Sclat tech</span></div>
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

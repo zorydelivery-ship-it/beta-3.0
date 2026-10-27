@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salud y Bienestar - Farmacias</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            background-color: #f8fafc;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding-bottom: 90px; /* Espacio para la barra flotante inferior */
+        }
+
+        /* Tarjeta de Farmacia */
+        .farmacia-hero-card {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            color: #ffffff;
+            padding: 24px;
+            box-shadow: 0 10px 25px rgba(13, 148, 136, 0.25);
+            background-image: linear-gradient(to top, rgba(6, 95, 70, 0.95), rgba(13, 148, 136, 0.8)), 
+                            url('https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=600');
+            background-size: cover;
+            background-position: center;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+
+        /* Estilo de la Barra de Navegación Inferior Flotante */
+        .bottom-nav {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 420px;
+            background: #ffffff;
+            border-radius: 50px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 15px;
+            z-index: 1000;
+        }
+
+        .bottom-nav .nav-item {
+            background: none;
+            border: none;
+            text-decoration: none;
+            color: #94a3b8;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 0.75rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: color 0.2s ease;
+        }
+
+        .bottom-nav .nav-item i {
+            font-size: 1.25rem;
+            margin-bottom: 3px;
+        }
+
+        .bottom-nav .nav-item.active, 
+        .bottom-nav .nav-item:hover {
+            color: #F85800;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container py-3">
+    <div class="mb-3">
+        <h4 class="fw-bold text-dark m-0" style="letter-spacing: -0.5px;">Salud y Bienestar 🌿</h4>
+        <p class="text-muted small m-0">Medicamentos y productos farmacéuticos con entrega a domicilio</p>
+    </div>
+
+    <div class="farmacia-hero-card" onclick="cargarLocal('farmacia central ayolas')">
+        <div class="d-flex justify-content-between align-items-start">
+            <div>
+                <span class="badge bg-white bg-opacity-25 text-white px-3 py-1 rounded-pill fw-bold mb-2" style="font-size: 0.7rem;">
+                    <i class="fas fa-shield-alt text-warning"></i> FARMACIA AUTORIZADA
+                </span>
+                <h3 class="fw-bold m-0 text-white" style="font-size: 1.35rem;">Farmacia Central Ayolas</h3>
+                <p class="small text-white-50 mt-1 mb-4">Primeros auxilios, analgésicos y cuidado diario</p>
+            </div>
+            <div class="rounded-circle bg-white text-teal d-flex align-items-center justify-content-center shadow" style="width: 42px; height: 42px; flex-shrink: 0;">
+                <i class="fas fa-pills" style="color: #0d9488;"></i>
+            </div>
+        </div>
+        
+        <div class="d-flex align-items-center justify-content-between pt-3 border-top border-light border-opacity-25 small text-white-50">
+            <span><i class="fas fa-motorcycle me-1"></i> Envío rápido disponible</span>
+            <span class="fw-bold text-white bg-dark bg-opacity-25 px-3 py-1 rounded-pill" onclick="event.stopPropagation(); cargarLocal('farmacia central ayolas');">
+                Ver catálogo <i class="fas fa-chevron-right ms-1" style="font-size: 0.65rem;"></i>
+            </span>
+        </div>
+    </div>
+
+    <div class="card border-0 shadow-sm rounded-4 p-4 bg-white mb-4" style="border: 2px solid #bbf7d0 !important;">
+        <div class="d-flex align-items-center gap-3 mb-3">
+            <div class="bg-success bg-opacity-10 text-success rounded-3 d-flex align-items-center justify-content-center" style="width: 45px; height: 45px; flex-shrink: 0;">
+                <i class="fas fa-file-medical fs-5"></i>
+            </div>
+            <div>
+                <h6 class="fw-bold text-dark mb-1" style="font-size: 0.95rem;">¿Buscas algo específico?</h6>
+                <p class="text-muted small m-0">Escribe los detalles del remedio o indicaciones para cotizar al instante.</p>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <textarea id="pedidoFarmaciaTexto" class="form-control rounded-3 border-light bg-light text-dark p-3" rows="3" placeholder="Ej: Necesito 1 caja de Paracetamol 500mg..."></textarea>
+        </div>
+
+        <div>
+            <button class="btn btn-success w-100 rounded-pill py-2 small fw-bold shadow-sm" onclick="enviarPedidoFarmaciaWhatsApp()">
+                Pedir
+            </button>
+        </div>
+    </div>
+</div>
+
+<nav class="bottom-nav">
+    <a href="index.html" class="nav-item active">
+        <i class="fa-solid fa-house"></i>
+        <span>Inicio</span>
+    </a>
+    <a href="locales.html" class="nav-item">
+        <i class="fa-solid fa-store"></i>
+        <span>Locales</span>
+    </a>
+    <button class="nav-item" onclick="abrirModalReseña()">
+        <i class="fa-solid fa-comment-dots"></i>
+        <span>Reseña</span>
+    </button>
+    <a href="https://wa.me/595982309464" target="_blank" class="nav-item">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>Ayuda</span>
+    </a>
+</nav>
+
+<div id="modalReseña" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1000; justify-content: center; align-items: center;">
+    <div style="background: #ffffff; padding: 25px; border-radius: 15px; width: 90%; max-width: 400px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); text-align: left; position: relative;">
+        <div id="formContainer">
+            <h3 style="margin-top: 0; text-align: center; color: #333;">Déjanos tu reseña</h3>
+            <p style="text-align: center; color: #777; font-size: 0.8rem;">100% anónima</p>
+            <form id="reseñaForm" onsubmit="enviarReseñaAnonima(event)" style="display: flex; flex-direction: column; gap: 12px;">
+                <input type="hidden" name="_subject" value="💬 Nueva Reseña Anónima - Zory Delivery">
+                <textarea id="mensajeReseña" name="mensaje" rows="4" placeholder="Escribe tu comentario aquí..." required style="padding: 10px; border: 1px solid #ccc; border-radius: 8px; font-family: 'Poppins', sans-serif; resize: none;"></textarea>
+                <div style="display: flex; gap: 10px; justify-content: flex-end;">
+                    <button type="button" onclick="cerrarModalReseña()" style="padding: 8px 15px; border: none; border-radius: 8px; background: #e0e0e0; cursor: pointer;">Cancelar</button>
+                    <button type="submit" id="btnEnviar" style="padding: 8px 20px; border: none; border-radius: 8px; background: #25D366; color: #fff; cursor: pointer;">Enviar</button>
+                </div>
+            </form>
+        </div>
+        <div id="mensajeExito" style="display: none; text-align: center; padding: 20px 0;">
+            <div style="font-size: 3rem; color: #25D366; margin-bottom: 10px;">✓</div>
+            <h3 style="color: #333;">¡Reseña enviada con éxito!</h3>
+            <button onclick="cerrarModalReseña()" style="padding: 8px 25px; border: none; border-radius: 8px; background: #25D366; color: #fff; cursor: pointer;">Aceptar</button>
+        </div>
+        <button onclick="cerrarModalReseña()" style="position: absolute; top: 10px; right: 15px; background: none; border: none; font-size: 1.2rem; cursor: pointer; color: #888;">&times;</button>
+    </div>
+</div>
+
+<script>
+    function enviarPedidoFarmaciaWhatsApp() {
+        const texto = document.getElementById('pedidoFarmaciaTexto').value.trim();
+
+        if (!texto) {
+            alert("Por favor escribe los detalles de lo que necesitas.");
+            return;
+        }
+
+        const numeroWhatsApp = "595982309464"; 
+
+        let mensaje = "Hola! Vengo desde la sección de Farmacias de la app y quiero hacer este pedido:\n\n";
+        mensaje += "Detalle: " + texto + "\n\n";
+        mensaje += "Quedo atento a la confirmación y el costo de envío. ¡Gracias!";
+
+        const urlWp = "https://wa.me/" + numeroWhatsApp + "?text=" + encodeURIComponent(mensaje);
+        window.open(urlWp, '_blank');
+    }
+
+    // Funciones del Modal de Reseña
+    function abrirModalReseña() {
+        document.getElementById('formContainer').style.display = 'block';
+        document.getElementById('mensajeExito').style.display = 'none';
+        document.getElementById('mensajeReseña').value = '';
+        document.getElementById('modalReseña').style.display = 'flex';
+    }
+    
+    function cerrarModalReseña() {
+        document.getElementById('modalReseña').style.display = 'none';
+    }
+    
+    function enviarReseñaAnonima(event) {
+        event.preventDefault();
+        const formData = new FormData(document.getElementById('reseñaForm'));
+        const btn = document.getElementById('btnEnviar');
+        btn.innerText = 'Enviando...';
+        btn.disabled = true;
+
+        fetch('https://formsubmit.co/ajax/zorydelivery@gmail.com', { method: 'POST', body: formData })
+        .then(res => res.json())
+        .then(() => {
+            document.getElementById('formContainer').style.display = 'none';
+            document.getElementById('mensajeExito').style.display = 'block';
+            btn.innerText = 'Enviar';
+            btn.disabled = false;
+        })
+        .catch(() => {
+            alert('Error al enviar. Inténtalo de nuevo.');
+            btn.innerText = 'Enviar';
+            btn.disabled = false;
+        });
+    }
+</script>
+<script src="js.js"></script>
+
+</body>
+</html>

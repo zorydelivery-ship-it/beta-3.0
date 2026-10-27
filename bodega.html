@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bodega - Bebidas y Más</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            background-color: #f8fafc;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding-bottom: 90px;
+        }
+
+        /* Cabezal / Hero Banner de Bodega */
+        .bodega-hero {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            color: #ffffff;
+            padding: 32px 24px;
+            box-shadow: 0 10px 25px rgba(234, 88, 12, 0.25);
+            background-image: linear-gradient(to top, rgba(154, 52, 18, 0.9), rgba(249, 115, 22, 0.75)), 
+                              url('https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=800');
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 24px;
+        }
+
+        /* Contenedor Minimalista de la Foto del Producto */
+        .producto-img-container {
+            height: 180px;
+            background: #ffffff;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .producto-img-container:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+
+        .producto-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .badge-categoria {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 0.65rem;
+            font-weight: 700;
+            padding: 4px 8px;
+            border-radius: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            backdrop-filter: blur(4px);
+            z-index: 2;
+        }
+
+        /* Estilo de la Barra de Navegación Inferior Flotante */
+        .bottom-nav {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 420px;
+            background: #ffffff;
+            border-radius: 50px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 15px;
+            z-index: 1000;
+        }
+
+        .bottom-nav .nav-item {
+            background: none;
+            border: none;
+            text-decoration: none;
+            color: #94a3b8;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 0.75rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: color 0.2s ease;
+            position: relative;
+        }
+
+        .bottom-nav .nav-item i {
+            font-size: 1.25rem;
+            margin-bottom: 3px;
+        }
+
+        .bottom-nav .nav-item.active, 
+        .bottom-nav .nav-item:hover {
+            color: #F85800;
+        }
+
+        /* Badge contador del carrito flotante */
+        #cart-counter {
+            position: absolute;
+            top: -5px;
+            right: 5px;
+            background: #F85800;
+            color: white;
+            font-size: 0.65rem;
+            padding: 2px 6px;
+            border-radius: 50px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container py-3">
+    <!-- Cabezal de Bodega -->
+    <div class="bodega-hero">
+        <span class="badge bg-warning text-dark px-3 py-1 rounded-pill fw-bold mb-2" style="font-size: 0.7rem;">
+            <i class="fas fa-snowflake me-1"></i> 100% HELADAS Y AL TOQUE
+        </span>
+        <h2 class="fw-bold text-white mb-1" style="font-size: 1.6rem;">Bodega 🍻</h2>
+        <p class="text-white-50 small m-0 mb-3">Cervezas, tragos, picadas, hielo y todo lo que necesitas para la juntada.</p>
+        <div class="d-flex align-items-center gap-2 text-white small">
+            <span class="bg-white bg-opacity-25 px-3 py-1 rounded-pill"><i class="fas fa-motorcycle me-1"></i> Delivery Rápido</span>
+            <span class="bg-white bg-opacity-25 px-3 py-1 rounded-pill"><i class="fas fa-clock me-1"></i> Abierto Ahora</span>
+        </div>
+    </div>
+
+    <!-- Título de Sección de Productos -->
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h5 class="fw-bold text-dark m-0">Catálogo de Productos</h5>
+        <span class="text-muted small">20 ítems disponibles</span>
+    </div>
+
+    <!-- Cuadrícula de 20 Productos de Bodega -->
+    <div class="row g-3" id="catalogoBodega">
+        
+        <!-- 1. Pack Heineken -->
+        <div class="col-6 col-md-4">
+            <div class="producto-img-container mb-2">
+                <span class="badge-categoria">Cervezas</span>
+                <img src="michelof pack.webp" alt="Pack Heineken">
+            </div>
+            <h6 class="fw-bold text-dark mb-2 text-truncate" style="font-size: 0.85rem;">Pack x6 Heineken Lata 350ml</h6>
+            <div class="d-grid">
+                <button type="button" class="btn btn-outline-success btn-sm rounded-pill fw-bold py-1" style="font-size: 0.75rem;" onclick="agregarAlCarrito('Pack x6 Heineken Lata 350ml')">Pedir</button>
+            </div>
+        </div>
+
+        <!-- 2. Pack Pilsen -->
+        <div class="col-6 col-md-4">
+            <div class="producto-img-container mb-2">
+                <span class="badge-categoria">Cervezas</span>
+                <img src="michelof pack.webp" alt="Pack Pilsen">
+            </div>
+            <h6 class="fw-bold text-dark mb-2 text-truncate" style="font-size: 0.85rem;">Pack x12 Pilsen Py 300ml</h6>
+            <div class="d-grid">
+                <button type="button" class="btn btn-outline-success btn-sm rounded-pill fw-bold py-1" style="font-size: 0.75rem;" onclick="agregarAlCarrito('Pack x12 Pilsen Py 300ml')">Pedir</button>
+            </div>
+        </div>
+
+        <!-- 3. Pack Corona -->
+        <div class="col-6 col-md-4">
+            <div class="producto-img-container mb-2">
+                <span class="badge-categoria">Cervezas</span>
+                <img src="michelof pack.webp" alt="Pack Corona">
+            </div>
+            <h6 class="fw-bold text-dark mb-2 text-truncate" style="font-size: 0.85rem;">Pack x6 Corona Extra 330ml</h6>
+            <div class="d-grid">
+                <button type="button" class="btn btn-outline-success btn-sm rounded-pill fw-bold py-1" style="font-size: 0.75rem;" onclick="agregarAlCarrito('Pack x6 Corona Extra 330ml')">Pedir</button>
+            </div>
+        </div>
+
+        <!-- 4. Vino San Telmo -->
+        <div class="col-6 col-md-4">
+            <div class="producto-img-container mb-2">
+                <span class="badge-categoria">Vinos</span>
+                <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=400" alt="Vino San Telmo">
+            </div>
+            <h6 class="fw-bold text-dark mb-2 text-truncate" style="font-size: 0.85rem;">Vino San Telmo Malbec 750ml</h6>
+            <div class="d-grid">
+                <button type="button" class="btn btn-outline-success btn-sm rounded-pill fw-bold py-1" style="font-size: 0.75rem;" onclick="agregarAlCarrito('Vino San Telmo Malbec 750ml')">Pedir</button>
+            </div>
+        </div>
+
+        <!-- 5. Fernet Branca -->
+        <div class="col-6 col-md-4">
+            <div class="producto-img-container mb-2">
+                <span class="badge-categoria">Tragos</span>
+                <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=400" alt="Fernet Branca">
+            </div>
+            <h6 class="fw-bold text-dark mb-2 text-truncate" style="font-size: 0.85rem;">Fernet Branca 750ml</h6>
+            <div class="d-grid">
+                <button type="button" class="btn btn-outline-success btn-sm rounded-pill fw-bold py-1" style="font-size: 0.75rem;" onclick="agregarAlCarrito('Fernet Branca 750ml')">Pedir</button>
+            </div>
+        </div>
+
+        <!-- 6. Vodka Smirnoff -->
+        <div class="col-6 col-md-4">
+            <div class="producto-img-container mb-2">
+                <span class="badge-categoria">Tragos</span>
+                <img src="https://images.unsplash.com/photo-1563227812-0ea4c22e6cc8?w=400" alt="Vodka Smirnoff">
+            </div>
+            <h6 class="fw-bold text-dark mb-2 text-truncate" style="font-size: 0.85rem;">Vodka Smirnoff 750ml</h6>
+            <div class="d-grid">
+                <button type="button" class="btn btn-outline-success btn-sm rounded-pill fw-bold py-1" style="font-size: 0.75rem;" onclick="agregarAlCarrito('Vodka Smirnoff 750ml')">Pedir</button>
+            </div>
+        </div>
+
+        <!-- 7. Whisky Johnnie Walker Red Label -->
+        <div class="col-6 col-md-4">
+            <div class="producto-img-container mb-2">
+                <span class="badge-categoria">Whisky</span>
+                <img src="https://images.unsplash.com/photo-1527061011665-3652c757a4d4?w=400" alt="Red Label">
+            </div>
+            <h6 class="fw-bold text-dark mb-2 text-truncate" style="font-size: 0.85rem;">Whisky Red Label 750ml</h6>
+            <div class="d-grid">
+                <button type="button" class="btn btn-outline-success btn-sm rounded-pill fw-bold py-1" style="font-size: 0.75rem;" onclick="agregarAlCarrito('Whisky Red Label 750ml')">Pedir</button>
+            </div>
+        </div>
+
+        <!-- 8. Gin Tanqueray -->
+        <div class="col-6 col-md-4">
+            <div class="producto-img-container mb-2">
+                <span class="badge-categoria">Tragos</span>
+                <img src="https://images.unsplash.com/photo-1607684073733-d1ea24bf745d?w=400" alt="Gin Tanqueray">
+            </div>
+            <h6 class="fw-bold text-dark mb-2 text-truncate" style="font-size: 0.85rem;">Gin Tanqueray 750ml</h6>
+            <div class="d-grid">
+                <button type="button" class="btn btn-outline-success btn-sm rounded-pill fw-bold py-1" style="font-size: 0.75rem;" onclick="agregarAlCarrito('Gin Tanqueray 750ml')">Pedir</button>
+            </div>
+        </div>
+
+        <!-- 9. Tequila Jose Cuervo -->
+        <div class="col-6 col-md-4">
+            <div class="producto-img-container mb-2">
+                <span class="badge-categoria">Tragos</span>
+                <img src="https://images.unsplash.com/photo-1541544741938-0af808871cc0?w=400" alt="Tequila">
+            </div>
+            <h6 class="fw-bold text-dark mb-2 text-truncate" style="font-size: 0.85rem;">Tequila Jose Cuervo Reposado</h6>
+            <div class="d-grid">
+                <button type="button" class="btn btn-outline-success btn-sm rounded-pill fw-bold py-1" style="font-size: 0.75rem;" onclick="agregarAlCarrito('Tequila Jose Cuervo Reposado')">Pedir</button>
+            </div>
+        </div>
+
+        <!-- 10. Energizante Red Bull -->
+        <div class="col-6 col-md-4">
+            <div class="producto-img-container mb-2">
+                <span class="badge-categoria">Mixers</span>
+                <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=400" alt="Red Bull">
+            </div>
+            <h6 class="fw-bold text-dark mb-2 text-truncate" style="font-size: 0.85rem;">Energizante Red Bull 250ml</h6>
+            <div class="d-grid">
+                <button type="button" class="btn btn-outline-success btn-sm rounded-pill fw-bold py-1" style="font-size: 0.75rem;" onclick="agregarAlCarrito('Energizante Red Bull 250ml')">Pedir</button>
+            </div>
+        </div>
+
+        <!-- 11. Agua Tónica Schweppes -->
+        <div class="col-6 col-md-4">
+            <div class="producto-img-container mb-2">
+                <span class="badge-categoria">Mixers</span>
+                <img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=400" alt="Agua Tonica">
+            </div>
+            <h6 class="fw-bold text-dark mb-2 text-truncate" style="font-size: 0.85rem;">Schweppes Tónica 1.5L</h6>
+            <div class="d-grid">
+                <button type="button" class="btn btn-outline-success btn-sm rounded-pill fw-bold py-1" style="font-size: 0.75rem;" onclick="agregarAlCarrito('Schweppes Tónica 1.5L')">Pedir</button>
+            </div>
+        </div>
+
+        <!-- 12. Hielo en Bolsa -->
+        <div class="col-6 col-md-4">
+            <div class="producto-img-container mb-2">
+                <span class="badge-categoria">Esenciales</span>
+                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400" alt="Hielo">
+            </div>
+            <h6 class="fw-bold text-dark mb-2 text-truncate" style="font-size: 0.85rem;">Bolsa de Hielo 2kg</h6>
+            <div class="d-grid">
+                <button type="button" class="btn btn-outline-success btn-sm rounded-pill fw-bold py-1" style="font-size: 0.75rem;" onclick="agregarAlCarrito('Bolsa de Hielo 2kg')">Pedir</button>
+            </div>
+        </div>
+
+        <!-- 13. Cigarrillos Kent -->
+        <div class="col-6 col-md-4">
+            <div class="producto-img-container mb-2">
+                <span class="badge-categoria">Cigarrillos</span>
+                <img src="https://images.unsplash.com/photo-1527844116342-ea491df270e5?w=400" alt="Cigarrillos">
+            </div>
+            <h6 class="fw-bold text-dark mb-2 text-truncate" style="font-size: 0.85rem;">Cigarrillo Kent Switch Box</h6>
+            <div class="d-grid">
+                <button type="button" class="btn btn-outline-success btn-sm rounded-pill fw-bold py-1" style="font-size: 0.75rem;" onclick="agregarAlCarrito('Cigarrillo Kent Switch Box')">Pedir</button>
+            </div>
+        </div>
+
+        <!-- 14. Cigarrillos Marlboro -->
+        <div class="col-6 col-md-4">
+            <div class="producto-img-container mb-2">
+                <span class="badge-categoria">Cigarrillos</span>
+                <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?w=400" alt="Marlboro">
+            </div>
+            <h6 class="fw-bold text-dark mb-2 text-truncate" style="font-size: 0.85rem;">Cigarrillo Marlboro Box Rojo</h6>
+            <div class="d-grid">
+                <button type="button" class="btn btn-outline-success btn-sm rounded-pill fw-bold py-1" style="font-size: 0.75rem;" onclick="agregarAlCarrito('Cigarrillo Marlboro Box Rojo')">Pedir</button>
+            </div>
+        </div>
+
+        <!-- 15. Preservativos Prudence -->
+        <div class="col-6 col-md-4">
+            <div class="producto-img-container mb-2">
+                <span class="badge-categoria">Cuidado</span>
+                <img src="https://images.unsplash.com/photo-1616401784845-180882ba9ba8?w=400" alt="Preservativos">
+            </div>
+            <h6 class="fw-bold text-dark mb-2 text-truncate" style="font-size: 0.85rem;">Preservativos Prudence x3</h6>
+            <div class="d-grid">
+                <button type="button" class="btn btn-outline-success btn-sm rounded-pill fw-bold py-1" style="font-size: 0.75rem;" onclick="agregarAlCarrito('Preservativos Prudence x3')">Pedir</button>
+            </div>
+        </div>
+
+        <!-- 16. Preservativos Durex -->
+        <div class="col-6 col-md-4">
+            <div class="producto-img-container mb-2">
+                <span class="badge-categoria">Cuidado</span>
+                <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400" alt="Durex">
+            </div>
+            <h6 class="fw-bold text-dark mb-2 text-truncate" style="font-size: 0.85rem;">Preservativos Durex Extra S. x3</h6>
+            <div class="d-grid">
+                <button type="button" class="btn btn-outline-success btn-sm rounded-pill fw-bold py-1" style="font-size: 0.75rem;" onclick="agregarAlCarrito('Preservativos Durex Extra S. x3')">Pedir</button>
+            </div>
+        </div>
+
+        <!-- 17. Papas Lays Gigante -->
+        <div class="col-6 col-md-4">
+            <div class="producto-img-container mb-2">
+                <span class="badge-categoria">Picadas</span>
+                <img src="https://images.unsplash.com/photo-1566478989037-eec170784d0b?w=400" alt="Papas Fritas">
+            </div>
+            <h6 class="fw-bold text-dark mb-2 text-truncate" style="font-size: 0.85rem;">Papas Lays Gran Formato 250g</h6>
+            <div class="d-grid">
+                <button type="button" class="btn btn-outline-success btn-sm rounded-pill fw-bold py-1" style="font-size: 0.75rem;" onclick="agregarAlCarrito('Papas Lays Gran Formato 250g')">Pedir</button>
+            </div>
+        </div>
+
+        <!-- 18. Maní Salado -->
+        <div class="col-6 col-md-4">
+            <div class="producto-img-container mb-2">
+                <span class="badge-categoria">Picadas</span>
+                <img src="https://images.unsplash.com/photo-1532336414038-cf19250c5757?w=400" alt="Mani">
+            </div>
+            <h6 class="fw-bold text-dark mb-2 text-truncate" style="font-size: 0.85rem;">Maní Salado Crocante 200g</h6>
+            <div class="d-grid">
+                <button type="button" class="btn btn-outline-success btn-sm rounded-pill fw-bold py-1" style="font-size: 0.75rem;" onclick="agregarAlCarrito('Maní Salado Crocante 200g')">Pedir</button>
+            </div>
+        </div>
+
+        <!-- 19. Gaseosa Coca Cola 2L -->
+        <div class="col-6 col-md-4">
+            <div class="producto-img-container mb-2">
+                <span class="badge-categoria">Gaseosas</span>
+                <img src="https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=400" alt="Coca Cola">
+            </div>
+            <h6 class="fw-bold text-dark mb-2 text-truncate" style="font-size: 0.85rem;">Gaseosa Coca-Cola Descartable 2L</h6>
+            <div class="d-grid">
+                <button type="button" class="btn btn-outline-success btn-sm rounded-pill fw-bold py-1" style="font-size: 0.75rem;" onclick="agregarAlCarrito('Gaseosa Coca-Cola Descartable 2L')">Pedir</button>
+            </div>
+        </div>
+
+        <!-- 20. Fuego / Carbón Vegetal -->
+        <div class="col-6 col-md-4">
+            <div class="producto-img-container mb-2">
+                <span class="badge-categoria">Asado</span>
+                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400" alt="Carbon">
+            </div>
+            <h6 class="fw-bold text-dark mb-2 text-truncate" style="font-size: 0.85rem;">Bolsa de Carbón Vegetal 5kg</h6>
+            <div class="d-grid">
+                <button type="button" class="btn btn-outline-success btn-sm rounded-pill fw-bold py-1" style="font-size: 0.75rem;" onclick="agregarAlCarrito('Bolsa de Carbón Vegetal 5kg')">Pedir</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Modal del Carrito (Bootstrap) -->
+<div class="modal fade" id="modalCarrito" tabindex="-1" aria-labelledby="modalCarritoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 rounded-4 shadow-lg">
+            <div class="modal-header bg-dark text-white rounded-top-4">
+                <h5 class="modal-title fw-bold" id="modalCarritoLabel"><i class="fas fa-shopping-cart me-2"></i> Tu Carrito de Bodega</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="lista-carrito" class="list-group mb-3">
+                    <!-- Aquí se cargan dinámicamente los productos agregados -->
+                    <p class="text-muted text-center py-3 m-0">Tu carrito está vacío.</p>
+                </div>
+            </div>
+            <div class="modal-footer border-0">
+                <button type="button" class="btn btn-outline-secondary rounded-pill px-4" data-bs-dismiss="modal">Seguir viendo</button>
+                <button type="button" class="btn btn-success rounded-pill px-4 fw-bold" onclick="enviarPedidoWhatsApp()"><i class="fab fa-whatsapp me-1"></i> Enviar Pedido</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Barra de Navegación Inferior Flotante (Con Botón de Carrito con type="button") -->
+<nav class="bottom-nav">
+    <a href="index.html" class="nav-item">
+        <i class="fa-solid fa-house"></i>
+        <span>Inicio</span>
+    </a>
+    <a href="locales.html" class="nav-item active">
+        <i class="fa-solid fa-store"></i>
+        <span>Locales</span>
+    </a>
+    <!-- IMPORTANTE: type="button" evita que la página se reinicie o envíe un submit fantasma -->
+    <button type="button" class="nav-item" onclick="abrirCarrito()">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span>Carrito</span>
+        <span id="cart-counter">0</span>
+    </button>
+    <a href="https://wa.me/595982309464" target="_blank" class="nav-item">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>Ayuda</span>
+    </a>
+</nav>
+
+<!-- Bootstrap JS Bundle -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Script del Carrito y WhatsApp -->
+<script>
+    let carrito = [];
+    let modalInstance = null;
+
+    function getModalInstance() {
+        if (!modalInstance) {
+            modalInstance = new bootstrap.Modal(document.getElementById('modalCarrito'));
+        }
+        return modalInstance;
+    }
+
+    function agregarAlCarrito(nombre) {
+        let productoExistente = carrito.find(item => item.nombre === nombre);
+        if (productoExistente) {
+            productoExistente.cantidad++;
+        } else {
+            carrito.push({ nombre, cantidad: 1 });
+        }
+        actualizarContador();
+    }
+
+    function actualizarContador() {
+        let totalItems = carrito.reduce((sum, item) => sum + item.cantidad, 0);
+        document.getElementById('cart-counter').innerText = totalItems;
+    }
+
+    function abrirCarrito() {
+        renderizarCarritoHTML();
+        getModalInstance().show();
+    }
+
+    function renderizarCarritoHTML() {
+        let listaContainer = document.getElementById('lista-carrito');
+        listaContainer.innerHTML = '';
+
+        if (carrito.length === 0) {
+            listaContainer.innerHTML = '<p class="text-muted text-center py-3 m-0">Tu carrito está vacío.</p>';
+        } else {
+            carrito.forEach((item, index) => {
+                listaContainer.innerHTML += `
+                    <div class="list-group-item d-flex justify-content-between align-items-center border-0 border-bottom py-2">
+                        <div>
+                            <h6 class="mb-0 fw-bold" style="font-size: 0.85rem;">${item.nombre}</h6>
+                            <small class="text-muted">Cantidad: ${item.cantidad}</small>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <button type="button" class="btn btn-outline-danger btn-sm py-0 px-2" onclick="eliminarDelCarrito(${index})"><i class="fas fa-trash-alt"></i></button>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+    }
+
+    function eliminarDelCarrito(index) {
+        carrito.splice(index, 1);
+        actualizarContador();
+        renderizarCarritoHTML();
+    }
+
+    function enviarPedidoWhatsApp() {
+        if (carrito.length === 0) {
+            alert("El carrito está vacío.");
+            return;
+        }
+
+        const telefono = "595982309464";
+        let mensaje = "¡Hola! Quiero hacer el siguiente pedido de la *Bodega*:\n\n";
+        
+        carrito.forEach(item => {
+            mensaje += `▪️ ${item.cantidad}x *${item.nombre}*\n`;
+        });
+
+        const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+        window.open(url, '_blank');
+    }
+</script>
+
+</body>
+</html>

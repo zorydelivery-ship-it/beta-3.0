@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Local · Zori Delivery</title>
+  <meta name="theme-color" content="#F85800">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon-192.png">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="zori-app.css">
+</head>
+<body data-page="local">
+  <div class="app">
+
+    <!-- Portada del local -->
+    <div class="zcover" id="zcover">
+      <a href="locales.html" class="zback" aria-label="Volver"><i class="fa-solid fa-arrow-left"></i></a>
+      <img id="storeBanner" src="" alt="">
+    </div>
+
+    <!-- Datos del local -->
+    <section class="zinfo">
+      <div class="zlogo-badge" id="storeLogo" hidden></div>
+      <h1 id="storeTitle">&nbsp;</h1>
+      <div class="zmeta" id="storeMeta"></div>
+      <label class="zsearch-s">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="search" id="storeSearch" placeholder="Buscar en este local" autocomplete="off">
+      </label>
+    </section>
+
+    <!-- Categorías del menú (se arman solas) -->
+    <nav id="storeCats" class="zcats" aria-label="Categorías del menú"></nav>
+
+    <!-- Menú (se arma solo desde la planilla) -->
+    <div id="menuContainer"></div>
+
+    <div class="zfoot">
+      <div class="social-icons">
+        <a href="https://www.facebook.com/share/19Axc55VUv/?mibextid=wwXIfr" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/zoridelivery?igsh=MXFobTh4amJndnNyeQ%3D%3D&utm_source=qr" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://wa.me/595982309464" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+      <div class="credits">Desarrollado por <span>Sclat tech</span></div>
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
