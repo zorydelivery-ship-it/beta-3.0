@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Qué ceno hoy? - Ruleta Casino Pro</title>
+    <!-- FontAwesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #090d16 0%, #172033 100%);
+            margin: 0;
+            padding-bottom: 90px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Estilos de la Barra de Navegación Inferior */
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #ffffff;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px 0;
+            box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.08);
+            z-index: 1000;
+        }
+
+        .bottom-nav .nav-item {
+            background: none;
+            border: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #64748b;
+            text-decoration: none;
+            font-size: 0.75rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .bottom-nav .nav-item i {
+            font-size: 1.25rem;
+            margin-bottom: 3px;
+        }
+
+        .bottom-nav .nav-item.active, 
+        .bottom-nav .nav-item:hover {
+            color: #ff416c;
+        }
+
+        /* Botón Central Flotante */
+        .btn-ruleta-flotante {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: linear-gradient(135deg, #ff416c, #ff4b2b);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 14px 24px;
+            font-weight: 800;
+            box-shadow: 0 10px 30px rgba(255, 65, 108, 0.6), 0 0 15px rgba(255, 255, 255, 0.4) inset;
+            z-index: 900;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            animation: latidoBtn 2s infinite ease-in-out;
+            border: 2px solid rgba(255, 255, 255, 0.8);
+            white-space: nowrap;
+        }
+
+        .btn-ruleta-flotante:hover {
+            transform: translate(-50%, -50%) scale(1.06);
+            box-shadow: 0 15px 35px rgba(255, 65, 108, 0.8);
+        }
+
+        .ruleta-btn-icon {
+            font-size: 1.6rem;
+            background: rgba(255, 255, 255, 0.25);
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .ruleta-btn-text {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+
+        .ruleta-btn-title {
+            font-size: 1rem;
+            letter-spacing: 0.4px;
+            text-transform: uppercase;
+            line-height: 1.2;
+        }
+
+        .ruleta-btn-subtitle {
+            font-size: 0.72rem;
+            font-weight: 500;
+            opacity: 0.95;
+            line-height: 1.1;
+        }
+
+        @keyframes latidoBtn {
+            0% { transform: translate(-50%, -50%) scale(1); }
+            50% { transform: translate(-50%, -50%) scale(1.03); }
+            100% { transform: translate(-50%, -50%) scale(1); }
+        }
+
+        /* Estilos del Modal de la Ruleta */
+        .ruleta-modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 2000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(8px);
+            padding: 15px;
+        }
+
+        .ruleta-modal-card {
+            background: #ffffff;
+            padding: 24px 20px;
+            border-radius: 28px;
+            width: 100%;
+            max-width: 360px;
+            text-align: center;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+            position: relative;
+        }
+
+        .ruleta-btn-cerrar {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: #f1f5f9;
+            border: none;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            font-size: 1rem;
+            color: #64748b;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s;
+        }
+        .ruleta-btn-cerrar:hover {
+            background: #e2e8f0;
+        }
+
+        /* Contenedor Estilo Casino Real */
+        .ruleta-wheel-container {
+            position: relative;
+            width: 285px;
+            height: 285px;
+            margin: 15px auto;
+            border-radius: 50%;
+            /* Marco metálico dorado/plateado con relieve múltiple de casino */
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4), inset 0 0 0 8px #1e293b, inset 0 0 0 12px #e2e8f0, inset 0 0 0 14px #b45309, inset 0 0 25px rgba(0,0,0,0.6);
+            border: 5px solid #0f172a;
+            overflow: visible; /* Permite que el puntero luzca sobresalido */
+        }
+
+        /* Puntero Casino Estilo Clásico (Flecha Dorada 3D) */
+        .ruleta-pointer {
+            position: absolute;
+            top: -14px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 14px solid transparent;
+            border-right: 14px solid transparent;
+            border-top: 26px solid #fbbf24; /* Dorado brillante */
+            z-index: 50;
+            filter: drop-shadow(0 4px 5px rgba(0,0,0,0.5));
+        }
+
+        .ruleta-pointer::after {
+            content: '';
+            position: absolute;
+            top: -28px;
+            left: -7px;
+            width: 14px;
+            height: 10px;
+            background: linear-gradient(135deg, #fff, #d97706);
+            border-radius: 50%;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        /* Rueda con Colores Casino Alta Definición */
+        .ruleta-wheel {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: conic-gradient(
+                #ffedd5 0deg 45deg,
+                #fed7aa 45deg 90deg,
+                #fbcfe8 90deg 135deg,
+                #bfdbfe 135deg 180deg,
+                #bbf7d0 180deg 225deg,
+                #e9d5ff 225deg 270deg,
+                #99f6e4 270deg 315deg,
+                #fecdd3 315deg 360deg
+            );
+            transition: transform 4.5s cubic-bezier(0.1, 0.7, 0.1, 1);
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.25);
+            overflow: hidden;
+        }
+
+        /* Brillo cenital glossy tipo cristal sobre la rueda */
+        .ruleta-wheel-container::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 30%, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0) 70%);
+            pointer-events: none;
+            border-radius: 50%;
+            z-index: 20;
+        }
+
+        .ruleta-item {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transform: rotate(calc(var(--i) * 45deg + 22.5deg));
+        }
+
+        .ruleta-content {
+            position: absolute;
+            top: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.72rem;
+            font-weight: 800;
+            color: #0f172a;
+            white-space: nowrap;
+            text-shadow: 0 1px 2px rgba(255,255,255,0.9);
+            letter-spacing: -0.2px;
+        }
+
+        /* Eje Central Casino (Botón Girar Estilo Ficha/Moneda de Oro) */
+        .ruleta-center-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 76px;
+            height: 76px;
+            background: radial-gradient(circle, #fcd34d 0%, #d97706 70%, #b45309 100%);
+            color: #ffffff;
+            border: 4px solid #fff5cc;
+            border-radius: 50%;
+            font-size: 0.75rem;
+            font-weight: 900;
+            letter-spacing: 0.8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.5), inset 0 2px 6px rgba(255,255,255,0.6);
+            cursor: pointer;
+            z-index: 30;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+            transition: transform 0.15s ease, filter 0.2s;
+        }
+        .ruleta-center-btn:hover {
+            transform: translate(-50%, -50%) scale(1.08);
+            filter: brightness(1.15);
+        }
+        .ruleta-center-btn:active {
+            transform: translate(-50%, -50%) scale(0.95);
+        }
+        .ruleta-center-btn:disabled {
+            opacity: 0.9;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Botón Central Flotante -->
+    <button onclick="abrirRuleta()" class="btn-ruleta-flotante">
+        <div class="ruleta-btn-icon">
+            <i class="fa-solid fa-dharmachakra fa-spin" style="animation-duration: 4s;"></i>
+        </div>
+        <div class="ruleta-btn-text">
+            <span class="ruleta-btn-title">¿Qué ceno hoy?</span>
+            <span class="ruleta-btn-subtitle">¡Toca para girar! 🎰</span>
+        </div>
+    </button>
+
+    <!-- Modal de la Ruleta -->
+    <div id="modalRuleta" class="ruleta-modal-overlay" style="display: none;">
+        <div class="ruleta-modal-card">
+            
+            <!-- Botón para cerrar -->
+            <button onclick="cerrarRuleta()" class="ruleta-btn-cerrar">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <h4 style="font-weight: 800; color: #1e293b; margin: 0 0 2px 0; font-size: 1.25rem;">🎰 ¿Qué ceno hoy?</h4>
+            <p style="color: #64748b; font-size: 0.8rem; margin: 0 0 10px 0;">Gira la rueda y deja que la suerte decida por ti.</p>
+
+            <!-- Contenedor Estilo Casino -->
+            <div class="ruleta-wheel-container">
+                <!-- Puntero dorado de casino -->
+                <div class="ruleta-pointer"></div>
+                
+                <div id="ruletaWheel" class="ruleta-wheel">
+                    <div class="ruleta-item" style="--i: 0;"><span class="ruleta-content">Lomito 🍔</span></div>
+                    <div class="ruleta-item" style="--i: 1;"><span class="ruleta-content">Pizza 🍕</span></div>
+                    <div class="ruleta-item" style="--i: 2;"><span class="ruleta-content">Empanadas 🥟</span></div>
+                    <div class="ruleta-item" style="--i: 3;"><span class="ruleta-content">Pizzanesa 🥩</span></div>
+                    <div class="ruleta-item" style="--i: 4;"><span class="ruleta-content">Hamburguesa 🍔</span></div>
+                    <div class="ruleta-item" style="--i: 5;"><span class="ruleta-content">Picada 🍟</span></div>
+                    <div class="ruleta-item" style="--i: 6;"><span class="ruleta-content">Sushi 🍣</span></div>
+                    <div class="ruleta-item" style="--i: 7;"><span class="ruleta-content">Árabe 🌯</span></div>
+                </div>
+                
+                <!-- Botón Central Ficha Dorada -->
+                <button id="btnGirar" onclick="girarRuleta()" class="ruleta-center-btn">
+                    GIRAR
+                </button>
+            </div>
+
+            <div style="margin: 12px 0;">
+                <span id="resultadoRuletaText" style="font-weight: 700; font-size: 0.95rem; color: #2563eb;">¡Presiona el centro para girar!</span>
+            </div>
+
+            <div>
+                <button id="btnPedirResultado" onclick="pedirGanadorRuleta()" style="display: none; background: linear-gradient(135deg, #22c55e, #15803d); color: #fff; border: none; padding: 10px 30px; border-radius: 50px; font-weight: bold; cursor: pointer; font-size: 0.9rem; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4);">
+                    <i class="fa-brands fa-whatsapp me-1"></i> Pedir
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Barra de Navegación Inferior Flotante -->
+    <nav class="bottom-nav">
+        <a href="index.html" class="nav-item">
+            <i class="fa-solid fa-house"></i>
+            <span>Inicio</span>
+        </a>
+        <a href="locales.html" class="nav-item">
+            <i class="fa-solid fa-store"></i>
+            <span>Locales</span>
+        </a>
+        <!-- Botón de Reseña -->
+        <button class="nav-item" onclick="abrirModalReseña()">
+            <i class="fa-solid fa-comment-dots"></i>
+            <span>Reseña</span>
+        </button>
+        <!-- Ruleta activo en esta página -->
+        <a href="ruleta.html" class="nav-item active">
+            <i class="fa-solid fa-dharmachakra"></i>
+            <span>Ruleta</span>
+        </a>
+        <a href="https://wa.me/595982309464" target="_blank" class="nav-item">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>Ayuda</span>
+        </a>
+    </nav>
+
+    <!-- Modal Reseña Anónima -->
+    <div id="modalReseña" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 2500; justify-content: center; align-items: center; backdrop-filter: blur(5px);">
+        <div style="background: #ffffff; padding: 25px; border-radius: 20px; width: 90%; max-width: 400px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); text-align: left; position: relative;">
+            <div id="formContainer">
+                <h3 style="margin-top: 0; text-align: center; color: #1e293b; font-weight: 800;">Dejanos tu reseña</h3>
+                <p style="text-align: center; color: #64748b; font-size: 0.8rem;">100% anónima</p>
+                <form id="reseñaForm" onsubmit="enviarReseñaAnonima(event)" style="display: flex; flex-direction: column; gap: 12px;">
+                    <input type="hidden" name="_subject" value="💬 Nueva Reseña Anónima - Zory Delivery">
+                    <textarea id="mensajeReseña" name="mensaje" rows="4" placeholder="Escribe tu comentario aquí..." required style="padding: 12px; border: 1px solid #cbd5e1; border-radius: 12px; font-family: 'Poppins', sans-serif; resize: none; font-size: 0.9rem; outline: none;"></textarea>
+                    <div style="display: flex; gap: 10px; justify-content: flex-end;">
+                        <button type="button" onclick="cerrarModalReseña()" style="padding: 10px 18px; border: none; border-radius: 10px; background: #f1f5f9; color: #64748b; font-weight: 600; cursor: pointer;">Cancelar</button>
+                        <button type="submit" id="btnEnviar" style="padding: 10px 22px; border: none; border-radius: 10px; background: #25D366; color: #fff; font-weight: 600; cursor: pointer; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);">Enviar</button>
+                    </div>
+                </form>
+            </div>
+            <div id="mensajeExito" style="display: none; text-align: center; padding: 20px 0;">
+                <div style="font-size: 3rem; color: #25D366; margin-bottom: 10px;">✓</div>
+                <h3 style="color: #1e293b; font-weight: 800;">¡Reseña enviada con éxito!</h3>
+                <button onclick="cerrarModalReseña()" style="padding: 10px 25px; border: none; border-radius: 10px; background: #25D366; color: #fff; font-weight: 600; cursor: pointer;">Aceptar</button>
+            </div>
+            <button onclick="cerrarModalReseña()" style="position: absolute; top: 12px; right: 15px; background: #f1f5f9; border: none; width: 30px; height: 30px; border-radius: 50%; font-size: 1.1rem; cursor: pointer; color: #64748b; display: flex; align-items: center; justify-content: center;">&times;</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        const opcionesCenaData = [
+            { nombre: "Lomito Completo 🍔" },
+            { nombre: "Pizza Muzzarella 🍕" },
+            { nombre: "Empanadas Surtidas 🥟" },
+            { nombre: "Pizzanesa con Papas 🥩" },
+            { nombre: "Hamburguesa Doble 🍔" },
+            { nombre: "Picada de Lomito 🍟" },
+            { nombre: "Sushi / Comida Japonesa 🍣" },
+            { nombre: "Lomito Árabe 🌯" }
+        ];
+
+        let platoSeleccionadoRuleta = "";
+        let gradosTotales = 0;
+
+        function abrirRuleta() {
+            document.getElementById('modalRuleta').style.display = 'flex';
+        }
+
+        function cerrarRuleta() {
+            document.getElementById('modalRuleta').style.display = 'none';
+        }
+
+        function girarRuleta() {
+            const wheel = document.getElementById('ruletaWheel');
+            const btnGirar = document.getElementById('btnGirar');
+            const btnPedir = document.getElementById('btnPedirResultado');
+            const textoResultado = document.getElementById('resultadoRuletaText');
+
+            btnGirar.disabled = true;
+            btnPedir.style.display = 'none';
+            textoResultado.innerText = "Girando la rueda...";
+
+            const indiceGanador = Math.floor(Math.random() * opcionesCenaData.length);
+            const gradosPorGajo = 45;
+            const vueltasExtra = 360 * 5;
+            
+            gradosTotales += vueltasExtra + (gradosTotales % 360 ? 360 - (gradosTotales % 360) : 0) + (indiceGanador * gradosPorGajo) + (gradosPorGajo / 2);
+            
+            wheel.style.transform = `rotate(-${gradosTotales}deg)`;
+
+            setTimeout(() => {
+                platoSeleccionadoRuleta = opcionesCenaData[indiceGanador].nombre;
+                textoResultado.innerHTML = `¡Ganador: <b style="color: #16a34a;">${platoSeleccionadoRuleta}</b>! 🎉`;
+                btnGirar.disabled = false;
+                btnPedir.style.display = 'inline-block';
+            }, 4500);
+        }
+
+        function pedirGanadorRuleta() {
+            const telefono = "595982309464"; 
+            const mensaje = `Hola! Usé la ruleta de la app y me tocó cenar:\n*${platoSeleccionadoRuleta}*\nQuiero hacer el pedido por favor.`;
+            const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+            window.open(url, '_blank');
+        }
+
+        function abrirModalReseña() {
+            document.getElementById('formContainer').style.display = 'block';
+            document.getElementById('mensajeExito').style.display = 'none';
+            document.getElementById('mensajeReseña').value = '';
+            document.getElementById('modalReseña').style.display = 'flex';
+        }
+
+        function cerrarModalReseña() {
+            document.getElementById('modalReseña').style.display = 'none';
+        }
+
+        function enviarReseñaAnonima(event) {
+            event.preventDefault();
+            const formData = new FormData(document.getElementById('reseñaForm'));
+            const btn = document.getElementById('btnEnviar');
+            btn.innerText = 'Enviando...';
+            btn.disabled = true;
+
+            fetch('https://formsubmit.co/ajax/zorydelivery@gmail.com', { method: 'POST', body: formData })
+            .then(res => res.json())
+            .then(() => {
+                document.getElementById('formContainer').style.display = 'none';
+                document.getElementById('mensajeExito').style.display = 'block';
+                btn.innerText = 'Enviar';
+                btn.disabled = false;
+            })
+            .catch(() => {
+                alert('Error al enviar. Inténtalo de nuevo.');
+                btn.innerText = 'Enviar';
+                btn.disabled = false;
+            });
+        }
+    </script>
+    <script src="js.js"></script>
+
+</body>
+</html>

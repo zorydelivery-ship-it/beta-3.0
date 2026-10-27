@@ -1,0 +1,589 @@
+local,categoria,nombre,descripcion,precio,variantes,imagen,disponible,nombre_pedido
+absoluto,PIZZAS,Pizza Mozzarella,"Salsa de tomate, mozzarella, aceitunas, aceite de oliva.",,Personal:25000|Fam. sin borde:45000|Fam. con borde:55000,,si,
+absoluto,PIZZAS,Pizza Pollo con Catupiry,"Salsa de tomate, mozzarella, pechuga de pollo desmenuzada y queso catupiry.",,Personal:25000|Fam. sin borde:45000|Fam. con borde:55000,,si,
+absoluto,PIZZAS,Pizza Palmito,"Salsa de tomate, mozzarella, palmito en cubos, queso katupiry, aceitunas.",,Personal:25000|Fam. sin borde:45000|Fam. con borde:55000,,si,
+absoluto,PIZZAS,Pizza Peperoni,"Salsa de tomate, mozzarella, pepperoni, aceitunas.",,Personal:25000|Fam. sin borde:45000|Fam. con borde:55000,,si,
+absoluto,PIZZAS,Pizza Rúcula y Tomate Seco,"Salsa de tomate, mozzarella, parmesano y aceite de oliva.",,Personal:25000|Fam. sin borde:45000|Fam. con borde:55000,,si,
+absoluto,PIZZAS,Pizza Choclo,"Salsa de tomate, mozzarella, choclo, catupiry, aceitunas.",,Personal:25000|Fam. sin borde:45000|Fam. con borde:55000,,si,
+absoluto,PIZZAS,Pizza Absoluta,"Salsa de tomate, mozzarella, calabresa, tomate en rodajas, cebolla morada, locote, aceitunas verdes y albahaca.",,Personal:25000|Fam. sin borde:45000|Fam. con borde:55000,,si,
+absoluto,PIZZAS,Pizza Carbonara,"Salsa de tomate, mozzarella, jamón, champiñones, cebolla morada.",,Personal:25000|Fam. sin borde:45000|Fam. con borde:55000,,si,
+absoluto,PIZZAS,Pizza Al Pesto,"Salsa de tomate, mozzarella, salsa pesto.",,Personal:25000|Fam. sin borde:45000|Fam. con borde:55000,,si,
+absoluto,PIZZAS,Pizza BBQ,"Salsa de tomate, mozzarella, bacon, pollo, y salsa barbacoa.",,Personal:25000|Fam. sin borde:55000|Fam. con borde:60000,,si,
+absoluto,PIZZAS,Pizza Picaña,"Salsa de tomate, mozzarella, catupiry, bacon, picaña encebollada.",,Personal:40000|Fam. sin borde:70000|Fam. con borde:80000,,si,
+absoluto,PAPAS FRITAS,Papas Chicas,,12000,,,si,
+absoluto,PAPAS FRITAS,Papas Medianas,,18000,,,si,
+absoluto,PAPAS FRITAS,Papas Grandes,,25000,,,si,
+absoluto,PAPAS FRITAS,Papas con Bacon y Cheddar,,25000,,,si,
+absoluto,LOMITOS,Sandwich de Lomito,"Pan gourmet ovalado, lomito, mozzarella, jamón, lechuga, tomate, huevo y mayo de la casa.",27000,,,si,
+absoluto,LOMITOS,Lomito Árabe Mixto,"Pan árabe, carne y pollo, repollo, mozzarella, tomate y mayo de la casa.",27000,,,si,
+absoluto,LOMITOS,Lomito de Carne,"Pan árabe, carne, mozzarella, repollo, tomate y mayo de la casa.",30000,,,si,
+absoluto,LOMITOS,Lomito de Pollo,"Pan árabe, pollo, mozzarella, tomate, repollo y mayo de la casa.",25000,,,si,
+absoluto,LOMITOS,Sandwich de Picaña,"Pan baguette, rúcula, morrón, cebolla, picaña, mozzarella y tomate.",35000,,,si,
+absoluto,LOMITOS,Lomi Cheddar,"Pan árabe, carne y pollo, repollo, tomate, mozzarella, extra cheddar y panceta.",35000,,,si,
+absoluto,LOMITOS,Lomi Full,"Pan árabe, extra carne y pollo, repollo, huevo, tomate, panceta, mozzarella.",35000,,,si,
+absoluto,LOMITOS,Sandwich de Lomito Full,"Pan baguette, lomito, lechuga, tomate, huevo, aceitunas, panceta, cebolla salteada.",35000,,,si,
+absoluto,BÚRGUERS,Chesse Burguer,"Pan gourmet, carne premium, cheddar y mayo de la casa.",20000,,,si,
+absoluto,BÚRGUERS,Absoluta Burguer,"Pan gourmet, carne premium, mozzarella, morrón asado, tomate seco y rúcula.",26000,,,si,
+absoluto,BÚRGUERS,Royal Burguer,"Pan gourmet, carne premium, cheddar, cebolla morada, lechuga, tomate y huevo.",26000,,,si,
+absoluto,BÚRGUERS,Barbacoa Burguer,"Pan gourmet, carne premium, cheddar, salsa BBQ, pepinillos, cebolla.",25000,,,si,
+absoluto,BÚRGUERS,Hambur Pizza,,65000,,,si,
+absoluto,PICADAS,Picaña con Papas y Farofa,,75000,,,si,Picada Picaña con Papas y Farofa
+absoluto,PICADAS,Pollo Frito con Papas,,35000,,,si,Picada Pollo Frito con Papas
+absoluto,AGREGADOS COMIDA,Extra Carne,,8000,,,si,Agregado: Extra Carne
+absoluto,AGREGADOS COMIDA,Extra Cheddar,,4000,,,si,Agregado: Extra Cheddar
+absoluto,AGREGADOS COMIDA,Extra Mozzarella,,6000,,,si,Agregado: Extra Mozzarella
+absoluto,AGREGADOS COMIDA,Extra Huevo,,4000,,,si,Agregado: Extra Huevo
+absoluto,AGREGADOS COMIDA,Extra Panceta,,4000,,,si,Agregado: Extra Panceta
+absoluto,AGREGADOS COMIDA,Extra Cebolla,,3000,,,si,Agregado: Extra Cebolla
+absoluto,CERVEZAS,Skol (Lata),,8000,,,si,Cerveza Skol Lata
+absoluto,CERVEZAS,Pilsen (Lata),,5000,,,si,Cerveza Pilsen Lata
+absoluto,CERVEZAS,Munich (Lata),,5000,,,si,Cerveza Munich Lata
+absoluto,CERVEZAS,Coronita (Botellita),,10000,,,si,Cerveza Coronita Botellita
+absoluto,CERVEZAS,Heineken (Botellita),,10000,,,si,Cerveza Heineken Botellita
+absoluto,CERVEZAS,Skol (Botellita),,10000,,,si,Cerveza Skol Botellita
+absoluto,CERVEZAS,Corona (Botella),,20000,,,si,Cerveza Corona Botella
+absoluto,CERVEZAS,Heineken (Botella),,20000,,,si,Cerveza Heineken Botella
+absoluto,CERVEZAS,Stella Artois (Botella),,20000,,,si,Cerveza Stella Artois Botella
+absoluto,CHOPP,Chopp Munich,,,300ml:10000|500ml:15000,,si,
+absoluto,SIN ALCOHOL,Agua Mineral,,5000,,,si,
+absoluto,SIN ALCOHOL,Gaseosa 250ml,,5000,,,si,
+absoluto,SIN ALCOHOL,Gaseosa 500ml,,10000,,,si,
+absoluto,SIN ALCOHOL,Gaseosa Lata,,8000,,,si,
+absoluto,SIN ALCOHOL,Gaseosa 1 L.,,12000,,,si,Gaseosa 1 Litro
+absoluto,SIN ALCOHOL,Gaseosa 1.5 L.,,15000,,,si,Gaseosa 1.5 Litros
+absoluto,TRAGOS,Aperol Spritz,"Espumante, Aperol, soda, rodajas de naranja.",30000,,,si,Aperol Spritz 500ml
+absoluto,TRAGOS,Campari,"Jugo de naranja, Campari, rodajas de naranja, azúcar.",30000,,,si,Campari 500ml
+absoluto,TRAGOS,Fernet,"Fernet Branca, Coca Cola.",,500ml:20000|700ml:25000,,si,
+absoluto,TRAGOS,Caipirinha,"Cachaça, limón, azúcar.",,500ml:20000|700ml:25000,,si,
+absoluto,TRAGOS,Margarita,"Tequila, jugo de limón, menta, azúcar.",,500ml:20000|700ml:25000,,si,
+absoluto,TRAGOS,Tequila Sunrise,"Tequila, granadina, jugo de naranja, azúcar.",,500ml:20000|700ml:25000,,si,
+absoluto,TRAGOS,Daikiri de Durazno,"Ron blanco, pulpa de durazno, azúcar, granadina.",,500ml:20000|700ml:25000,,si,
+absoluto,TRAGOS,Daikiri de Frutilla,"Frutilla, ron frutos rojos, azúcar, leche condensada.",,500ml:20000|700ml:25000,,si,
+absoluto,TRAGOS,Piña Colada,"Piña, ron de coco, leche condensada, azúcar.",,500ml:20000|700ml:25000,,si,
+absoluto,TRAGOS,Pantera Rosa,"Piña, ron de coco, granadina, azúcar.",,500ml:20000|700ml:25000,,si,
+absoluto,TRAGOS,Caipiroska,"Vodka, limón, azúcar.",,500ml:20000|700ml:25000,,si,
+absoluto,TRAGOS,Destornillador,"Jugo de naranja, Vodka, azúcar.",,500ml:20000|700ml:25000,,si,
+absoluto,TRAGOS,Caipiruva,"Vino tinto, limón, azúcar.",,500ml:20000|700ml:25000,,si,
+absoluto,TRAGOS,Sex on the Beach,"Vodka, licor de durazno, jugo de naranja, granadina.",,500ml:20000|700ml:25000,,si,
+absoluto,TRAGOS,Jarra de Sangría,"Vino tinto, rodajas de naranja, azúcar.",65000,,,si,
+absoluto,SHOTS,Jagger,,25000,,,si,Shot de Jagger
+absoluto,SHOTS,Tequila,,15000,,,si,Shot de Tequila
+absoluto,SHOTS,Vodka,,15000,,,si,Shot de Vodka
+francol,CAMADINHAS,Tradicional,"Açaí, leche en polvo, leche condensada, granola y banana.",,140ml:7000|240ml:12000|330ml:17000|440ml:22000|550ml:27000|1 kilo:65000,acai-franco-baso.png,si,
+francol,CAMADINHAS,Oreo,"Açaí, leche en polvo, leche condensada, oreo, nutella.",,140ml:7000|240ml:12000|330ml:17000|440ml:22000|550ml:27000|1 kilo:65000,acai-franco-baso.png,si,
+francol,CAMADINHAS,Tres Leches,"Açaí, leche en polvo, leche condensada, dulce de leche.",,140ml:7000|240ml:12000|330ml:17000|440ml:22000|550ml:27000|1 kilo:65000,acai-franco-baso.png,si,
+francol,AGREGADOS,Leche condensada,Extra de leche condensada.,2000,,,si,Agregado Leche condensada
+francol,AGREGADOS,Leche en polvo,Extra de leche en polvo.,2000,,,si,Agregado Leche en polvo
+francol,AGREGADOS,Granola,Extra de granola crujiente.,2000,,,si,Agregado Granola
+francol,AGREGADOS,Banana,Porción extra de banana.,2000,,,si,Agregado Banana
+francol,AGREGADOS,Nutella,Porción extra de Nutella.,3000,,,si,Agregado Nutella
+francol,AGREGADOS,Dulce de leche,Porción extra de dulce de leche.,3000,,,si,Agregado Dulce de leche
+francol,AGREGADOS,Rocklets,Porción extra de Rocklets.,3000,,,si,Agregado Rocklets
+bacoa,HAMBURGUESAS,Carnívora,"Pan artesanal, triple carne, panceta, cebolla morada, locote rojo, mozzarella y cheddar.",30000,,,si,Hamburguesa Carnívora
+bacoa,HAMBURGUESAS,De la Casa,"Pan artesanal, doble carne, mozzarella, cheddar, tomate, lechuga, cebolla morada y salsa barbacoa.",26000,,,si,Hamburguesa De la Casa
+bacoa,HAMBURGUESAS,Completa,"Pan artesanal, medallón de carne de 130gr., mozzarella, panceta, tomate, lechuga, cebolla morada, mayonesa y salsa de ajo.",24000,,,si,Hamburguesa Completa
+bacoa,HAMBURGUESAS,Simple,"Pan artesanal, carne, lechuga, tomate, huevo, jamón, queso y salsa de ajo.",22000,,,si,Hamburguesa Simple
+bacoa,HAMBURGUESAS,Cheddar,"Pan artesanal, medallón de carne, panceta, doble cheddar, mayonesa y salsa de ajo.",20000,,,si,Hamburguesa Cheddar
+bacoa,HAMBURGUESAS,Barbacoa,"Pan artesanal, medallón de carne, pepinillo, salsa barbacoa, queso y salsa de ajo.",20000,,,si,Hamburguesa Barbacoa
+bacoa,HAMBURGUESAS,Hambur Kids,"Pan artesanal, carne de 100 gr. y doble cheddar.",16000,,,si,
+bacoa,HAMBURGUESAS,Hamburpizza,"Pan baguette, doble carne, pepperoni, mozzarella, jamón, lechuga, huevo, tomate, mayonesa, orégano y salsa p/ pizza.",37000,,,si,
+bacoa,HAMBURGUESAS,Doble Carne,"Doble carne, doble cheddar, cebolla morada, panceta y mayonesa.",25000,,,si,Hamburguesa Doble Carne
+bacoa,HAMBURGUESAS,Oklahoma,"Doble carne, salsa barbacoa, cebolla, doble cheddar, panceta y pepinillo.",26000,,,si,Hamburguesa Oklahoma
+bacoa,LOMITOS Y SÁNDWICHES,Árabe de Picaña,"Pan árabe, carne de picaña, lechuga, morron",35000,,,si,
+bacoa,LOMITOS Y SÁNDWICHES,Sándwich de Picaña,"Pan baguette, carne de picaña, doble queso, tomate, lechuga y salsa de ajo.",40000,,,si,
+bacoa,LOMITOS Y SÁNDWICHES,Especial,"Pan baguette, carne picada, locote rojo, cebolla morada, cheddar, mozzarella, mostaza-mayonesa y picante.",35000,,,si,Sándwich Especial
+bacoa,ESPECIALIDADES DE PICAÑA,Picada de Picaña Personal,"Carne de picaña, papas fritas y chorizo.",,Opción 1:70000|Opción 2:90000,,si,
+bacoa,ESPECIALIDADES DE PICAÑA,Picaña al Plato,"Filete de picaña, cebolla, tomate y lechuga.",40000,,,si,
+bacoa,PAPAS Y ACOMPAÑAMIENTOS,Papa Frita Simple,,,Chica:13000|Grande:20000,,si,
+bacoa,PAPAS Y ACOMPAÑAMIENTOS,Papa Frita con Cheddar y Panceta,,23000,,,si,
+bacoa,PAPAS Y ACOMPAÑAMIENTOS,Papas Bacoa,"Papas fritas, mozzarella, cheddar, carne, locote rojo y cebolla morada.",35000,,,si,
+bacoa,PAPAS Y ACOMPAÑAMIENTOS,Salchipapas,"Papas fritas, rodajas de pancho y cheddar.",23000,,,si,
+bacoa,AGREGADOS,Huevo,,4000,,,si,Agregado: Huevo
+bacoa,AGREGADOS,Pepinillo,,4000,,,si,Agregado: Pepinillo
+bacoa,AGREGADOS,Cebolla Morada,,4000,,,si,Agregado: Cebolla Morada
+bacoa,AGREGADOS,Locote Rojo,,4000,,,si,Agregado: Locote Rojo
+bacoa,AGREGADOS,Cheddar,,4000,,,si,Agregado: Cheddar
+bacoa,AGREGADOS,Mozzarella,,4000,,,si,Agregado: Mozzarella
+bacoa,AGREGADOS,Jamón,,4000,,,si,Agregado: Jamón
+bacoa,AGREGADOS,Panceta,,4000,,,si,Agregado: Panceta
+bacoa,AGREGADOS,Salsas,,4000,,,si,Agregado: Salsas
+bacoa,BEBIDAS,Coca Cola 1.5L,,12000,,,si,
+bacoa,BEBIDAS,Coca Cola 1L,,9000,,,si,
+bacoa,BEBIDAS,Coca Cola 500ML,,8000,,,si,
+bacoa,BEBIDAS,Coca Cola Lata,,8000,,,si,
+bacoa,CERVEZAS Y TRAGOS,Heineken 650ml,,18000,,,si,
+bacoa,CERVEZAS Y TRAGOS,Miller 600ml,,17000,,,si,
+bacoa,CERVEZAS Y TRAGOS,Stella Artois 600ml,,17000,,,si,
+bacoa,CERVEZAS Y TRAGOS,Corona 710ml,,18000,,,si,
+bacoa,CERVEZAS Y TRAGOS,Caipiriña 700ml,,20000,,,si,
+bacoa,CERVEZAS Y TRAGOS,Fernet,,20000,,,si,
+el-rey-pele,MENÚ PRINCIPAL,Hamburguesa Guaraní,Hamburguesa clásica estilo guaraní.,13000,,https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=200,si,
+el-rey-pele,MENÚ PRINCIPAL,Hamburguesa Casera,Medallón de carne casero con ingredientes frescos.,15000,,https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=200,si,
+el-rey-pele,MENÚ PRINCIPAL,Hamburguesa Guaraní Doble,Doble porción de carne estilo guaraní.,20000,,https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=200,si,
+el-rey-pele,MENÚ PRINCIPAL,Hamburguesa Casera Doble,"Doble medallón casero, queso y salsas.",25000,,https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=200,si,
+el-rey-pele,MENÚ PRINCIPAL,Sandwich de Lomito,Tradicional sándwich de lomito completo.,20000,,https://images.unsplash.com/photo-1550547660-d9450f859349?w=200,si,
+el-rey-pele,MENÚ PRINCIPAL,Lomito Árabe Mixto,Lomito en pan árabe con carnes mixtas y vegetales.,30000,,https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?w=200,si,
+el-rey-pele,MENÚ PRINCIPAL,Papas Fritas,Porción de papas fritas crujientes.,10000,,https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=200,si,
+home,HAMBURGUESAS,Kids,"Pan, carne, queso y salsa.",13000,,,si,Hamburguesa Kids
+home,HAMBURGUESAS,Classic,"Pan, carne, huevo, lechuga, tomate y salsa.",15000,,,si,Hamburguesa Classic
+home,HAMBURGUESAS,Classic Max,"Pan, medallón de carne, queso, tomate, lechuga, huevo y salsa.",17000,,,si,Hamburguesa Classic Max
+home,HAMBURGUESAS,Classic de Pollo,"Pan, carne de pollo, huevo, queso mozzarella, lechuga, tomate y salsa.",15000,,,si,Hamburguesa Classic de Pollo
+home,HAMBURGUESAS,Doble Classic,"Pan, doble carne, queso, tomate, lechuga, huevo y salsa.",22000,,,si,Hamburguesa Doble Classic
+home,HAMBURGUESAS,Barbacoa,"Pan, medallón de carne, queso, huevo, tomate, pepinillo y salsa barbacoa.",22000,,,si,Hamburguesa Barbacoa
+home,HAMBURGUESAS,Bacon,"Pan, medallón de carne, queso y panceta.",22000,,,si,Hamburguesa Bacon
+home,HAMBURGUESAS,De la Casa,"Pan, medallón de carne, queso, huevo, panceta, tomate, lechuga y salsa.",23000,,,si,Hamburguesa De la Casa
+home,HAMBURGUESAS,Especial,"Pan, medallón de carne, queso cheddar, panceta, huevo, cebolla caramelizada, tomate y salsa barbacoa.",25000,,,si,Hamburguesa Especial
+home,HAMBURGUESAS,Doble Max,"Pan, doble medallón de carne, queso, huevo, tomate, lechuga y salsa.",25000,,,si,Hamburguesa Doble Max
+home,HAMBURGUESAS,Completa,"Pan, medallón de carne, queso, huevo, tomate, lechuga, panceta, cebolla morada y salsa.",26000,,,si,Hamburguesa Completa
+home,HAMBURGUESAS,Mbarete,"Pan, doble medallón de carne, queso, panceta, huevo, lechuga, tomate y salsa.",30000,,,si,Hamburguesa Mbarete
+home,HAMBURGUESAS,Triple Carne,"Pan, triple medallón de carne, queso, huevo, lechuga, tomate y salsa.",30000,,,si,Hamburguesa Triple Carne
+home,HAMBURGUESAS,Hamburpiña,"Pan, doble medallón de carne, queso, panceta, piña y salsa.",35000,,,si,Hamburguesa Hamburpiña
+home,HAMBURGUESAS,Triple Smashburgers,"Pan, triple medallón de carne, cebolla, pepinillo, huevo, panceta, queso y salsa.",35000,,,si,Hamburguesa Triple Smashburgers
+home,LOMITOS,Sándwich de Lomito,"Pan, carne de lomito, huevo, cebolla caramelizada, queso y salsa.",23000,,,si,
+home,LOMITOS,Lomito Árabe de Pollo,"Pan árabe, pollo, repollo, tomate, queso y salsa de ajo.",22000,,,si,
+home,LOMITOS,Lomito Árabe Mixto,"Pan árabe, carne de lomito y pollo, repollo, tomate, queso y salsa de ajo.",25000,,,si,
+home,LOMITOS,Lomito Árabe de Carne,"Pan árabe, carne de lomito, repollo, tomate, queso y salsa de ajo.",28000,,,si,
+home,PAPAS FRITAS,Papas Fritas (Porción Chica),,10000,,,si,
+home,PAPAS FRITAS,Papas Fritas (Porción Grande),,20000,,,si,
+home,PAPAS FRITAS,Papas Gratinadas,,20000,,,si,
+home,AGREGADOS,Cebolla Caramelizada,,2000,,,si,Agregado: Cebolla Caramelizada
+home,AGREGADOS,Huevo,,2000,,,si,Agregado: Huevo
+home,AGREGADOS,Queso Cheddar,,2000,,,si,Agregado: Queso Cheddar
+home,AGREGADOS,Queso Mozzarella,,2000,,,si,Agregado: Queso Mozzarella
+home,AGREGADOS,Panceta,,5000,,,si,Agregado: Panceta
+capi,ESPECIAL DE LA CASA,Mexicana,"Salsa de tomate, queso mozzarellas, salsa de carne molida, morrón, aceituna, picante y orégano.",,Personal:25000|Grande:65000|Extra:80000,,si,
+capi,ESPECIAL DE LA CASA,Súper Pollo,"Salsa de tomate, queso mozzarella, pollo, champiñón, cebolla caramelizada, panceta, rodajas de tomate y orégano.",,Personal:25000|Grande:60000|Extra:75000,,si,
+capi,ESPECIAL DE LA CASA,Súper Embutido,"Salsa de tomate, queso mozzarella, pepperoni, calabresa, jamón, salchichas y orégano.",,Personal:25000|Grande:60000|Extra:75000,,si,
+capi,ESPECIAL DE LA CASA,Hawaiana,"Salsa de tomate, queso mozzarella, champiñón, piña, jamón, aceitunas y orégano.",,Personal:25000|Grande:60000|Extra:75000,,si,
+capi,ESPECIAL DE LA CASA,Completa,"Salsa de tomate, queso mozzarella, palmitos, aceituna, champiñón, choclo, jamón, cebolla caramelizada, morrón y orégano.",,Personal:25000|Grande:60000|Extra:75000,,si,
+capi,ESPECIAL DE LA CASA,Fungí Panceta,"Salsa de tomate, queso mozzarella, panceta, cebolla caramelizada, champiñón y orégano.",,Personal:25000|Grande:60000|Extra:75000,,si,
+capi,ESPECIAL DE LA CASA,Lomo Cheddar,"Salsa de tomate, queso mozzarella, queso cheddar, lomo vacuno sofrito, champiñón, aceitunas y orégano.",,Personal:25000|Grande:65000|Extra:80000,,si,
+capi,ESPECIAL DE LA CASA,Carnívora,"Salsa de tomate, queso mozzarella, salsa de carne molida, pepperoni, salchichas, jamón, calabresa, morrón, aceitunas y orégano.",,Personal:25000|Grande:70000|Extra:85000,,si,
+capi,ESPECIAL DE LA CASA,Suprema,"Salsa de tomate, queso mozzarella, salsa de carne molida, cebolla cruda, pepinillo y orégano.",,Personal:25000|Grande:65000|Extra:80000,,si,
+capi,PIZZAS CLÁSICAS,Napolitana,"Salsa de tomate, queso mozzarella, jamón, rodajas de tomate y orégano.",,Personal:20000|Grande:40000|Extra:55000,,si,
+capi,PIZZAS CLÁSICAS,Anchoa & Aceitunas,"Salsa de tomate, queso mozzarella, anchoas, aceituna y orégano.",,Personal:22000|Grande:45000|Extra:60000,,si,
+capi,PIZZAS CLÁSICAS,Jardinera,"Salsa de tomate, queso mozzarella, cebolla caramelizada, huevo, aceitunas, tomate en rodajas y orégano.",,Personal:22000|Grande:45000|Extra:60000,,si,
+capi,PIZZAS CLÁSICAS,5 Quesos,"Salsa de tomate, queso mozzarella, queso roquefort, queso parmesano, queso cheddar, queso catupiry y orégano.",,Personal:22000|Grande:55000|Extra:70000,,si,
+capi,PIZZAS CLÁSICAS,Primavera,"Salsa de tomate, queso mozzarella, pollo, arveja, champiñón, cebolla caramelizada y orégano.",,Personal:22000|Grande:50000|Extra:65000,,si,
+capi,PIZZAS CLÁSICAS,Inglesa,"Salsa de tomate, queso mozzarella, palmito, atún, arveja y orégano.",,Personal:22000|Grande:50000|Extra:65000,,si,
+capi,PIZZAS CLÁSICAS,Panceta,"Salsa de tomate, queso mozzarella, panceta y orégano.",,Personal:20000|Grande:40000|Extra:55000,,si,
+capi,PIZZAS CLÁSICAS,Mediterránea,"Salsa de tomate, queso mozzarella, jamón crudo, tomate en rodajas y albahaca fresca.",,Personal:22000|Grande:60000|Extra:75000,,si,
+capi,PIZZAS CLÁSICAS,Cebolla,"Salsa de tomate, queso mozzarella, cebolla y orégano.",,Personal:20000|Grande:40000|Extra:55000,,si,
+capi,PIZZAS CLÁSICAS,Palmitos,"Salsa de tomate, queso mozzarella, palmito y orégano.",,Personal:20000|Grande:35000|Extra:50000,,si,
+capi,PIZZAS CLÁSICAS,Muzzarella,"Salsa de tomate, queso mozzarella y orégano.",,Personal:15000|Grande:30000|Extra:45000,,si,
+capi,PIZZAS CLÁSICAS,Panceta Especial Capi,"Salsa de tomate, queso mozzarella, panceta, huevo, cebolla caramelizada, tomate en rodajas y orégano.",,Personal:22000|Grande:50000|Extra:65000,,si,
+capi,PIZZAS CLÁSICAS,Morrón,"Salsa de tomate, queso mozzarella, morrón y orégano.",,Personal:20000|Grande:40000|Extra:55000,,si,
+capi,PIZZAS CLÁSICAS,Roquefort & Cebolla,"Salsa de tomate, queso mozzarella, queso roquefort, cebolla cruda y orégano.",,Personal:22000|Grande:50000|Extra:65000,,si,
+capi,PIZZAS CLÁSICAS,Catupiry,"Salsa de tomate, queso mozzarella, catupiry y orégano.",,Personal:20000|Grande:40000|Extra:55000,,si,
+capi,PIZZAS CLÁSICAS,Huevo & Panceta,"Salsa de tomate, queso mozzarella, huevo, panceta y orégano.",,Personal:20000|Grande:45000|Extra:60000,,si,
+capi,PIZZAS CLÁSICAS,Margarita,"Salsa de tomate, queso mozzarella, tomate en rodajas y albahaca seca.",,Personal:20000|Grande:35000|Extra:50000,,si,
+capi,PIZZAS CLÁSICAS,Atún Especial,"Salsa de tomate, queso mozzarella, atún, cebolla caramelizada, aceitunas y orégano.",,Personal:22000|Grande:45000|Extra:60000,,si,
+capi,PIZZAS CLÁSICAS,Jamón & Albahaca,"Salsa de tomate, queso mozzarella, jamón, tomate en rodajas y albahaca seca.",,Personal:20000|Grande:40000|Extra:55000,,si,
+capi,PIZZAS CLÁSICAS,Choclo Catupiry,"Salsa de tomate, queso mozzarella, choclo, queso catupiry y orégano.",,Personal:22000|Grande:45000|Extra:60000,,si,
+capi,PIZZAS CLÁSICAS,Salchicheddar,"Salsa de tomate, queso mozzarella, salchichas, morrón, queso cheddar y orégano.",,Personal:22000|Grande:50000|Extra:65000,,si,
+capi,PIZZAS CLÁSICAS,Pepperoni,"Salsa de tomate, queso mozzarella, pepperoni y orégano.",,Personal:20000|Grande:50000|Extra:65000,,si,
+capi,PIZZAS CLÁSICAS,Calabresa & Cebolla,"Salsa de tomate, queso mozzarella, calabresa, cebolla caramelizada y orégano.",,Personal:22000|Grande:55000|Extra:70000,,si,
+capi,PIZZAS CLÁSICAS,Margarita al Ajo,"Salsa de tomate, queso mozzarella, ajo, tomate en rodajas y albahaca seca.",,Personal:20000|Grande:40000|Extra:55000,,si,
+capi,PIZZAS CLÁSICAS,Champiñón,"Salsa de tomate, queso mozzarella, champiñón y orégano.",,Personal:20000|Grande:45000|Extra:60000,,si,
+capi,PIZZAS CLÁSICAS,Pollo Choclo Catupiry,"Salsa de tomate, queso mozzarella, pollo, choclo, queso catupiry y orégano.",,Personal:22000|Grande:55000|Extra:70000,,si,
+capi,PIZZAS CLÁSICAS,La Diabla,"Salsa de tomate, queso mozzarella, chorizo picante, pepinillo y orégano.",,Personal:22000|Grande:55000|Extra:70000,,si,
+capi,PIZZAS CLÁSICAS,Cebolla & Panceta,"Salsa de tomate, queso mozzarella, panceta, cebolla caramelizada y orégano.",,Personal:20000|Grande:45000|Extra:60000,,si,
+capi,PIZZAS CLÁSICAS,Jamón Catupiry,"Salsa de tomate, queso mozzarella, jamón, queso catupiry y orégano.",,Personal:20000|Grande:45000|Extra:60000,,si,
+capi,PIZZAS CLÁSICAS,Vegetariana,"Salsa de tomate, queso mozzarella, choclo, morrón, cebolla caramelizada, champiñón, tomate en rodajas y orégano.",,Personal:22000|Grande:50000|Extra:65000,,si,
+capi,PIZZAS CLÁSICAS,Atún,"Salsa de tomate, queso mozzarella, atún y orégano.",,Personal:20000|Grande:40000|Extra:55000,,si,
+capi,PIZZAS CLÁSICAS,Calabresa,"Salsa de tomate, queso mozzarella, calabresa y orégano.",,Personal:20000|Grande:50000|Extra:65000,,si,
+capi,PIZZAS CLÁSICAS,Pollo Catupiry,"Salsa de tomate, queso mozzarella, pollo, queso catupiry y orégano.",,Personal:20000|Grande:50000|Extra:65000,,si,
+capi,PIZZAS CLÁSICAS,Choclo,"Salsa de tomate, queso mozzarella, choclo y orégano.",,Personal:20000|Grande:40000|Extra:55000,,si,
+capi,PIZZAS CLÁSICAS,Alemana,"Salsa de tomate, queso mozzarella, salchichas y orégano.",,Personal:20000|Grande:45000|Extra:60000,,si,
+capi,PIZZAS CLÁSICAS,Pepperoni Catupiry,"Salsa de tomate, queso mozzarella, pepperoni, queso catupiry y orégano.",,Personal:22000|Grande:55000|Extra:70000,,si,
+capi,PIZZAS CLÁSICAS,Jamón,"Salsa de tomate, queso mozzarella, jamón y orégano.",,Personal:20000|Grande:40000|Extra:55000,,si,
+capi,PIZZAS CLÁSICAS,Aceitunas,"Salsa de tomate, queso mozzarella, aceitunas y orégano.",,Personal:20000|Grande:40000|Extra:55000,,si,
+capi,GASEOSAS Y BEBIDAS,Gaseosa Retornable,250 ml (4.000 Gs.) / 350 ml (5.000 Gs.) / 1 Litro (8.000 Gs.),,250ml:4000|350ml:5000|1L:8000,,si,
+capi,GASEOSAS Y BEBIDAS,Gaseosa Descartable,"500ml (7k) | 1L (10k) | 1,5L (15k) | 2L (20k)",,500ml:7000|1L:10000|1.5L:15000|2L:20000,,si,
+capi,GASEOSAS Y BEBIDAS,"Otros (Lata, Agua, Jugo)",Lata (7k) | Agua (5k) | Jugo (12k),,Agua:5000|Gaseosa en Lata:7000|Jugo:12000,,si,
+capi,CERVEZAS Y TRAGOS,"Cervezas (Heineken, Amstel, etc.)","Heineken, Heineken Silver, Amstel, Sajonia, Sol.",,Cerveza Heineken:20000|Cerveza Heineken Silver:20000|Cerveza Amstel:20000|Cerveza Sajonia:20000|Cerveza Sol:20000,,si,
+capi,CERVEZAS Y TRAGOS,Sangría y Fernet,Jarrita (15k) | Jarra (35k) | Fernet (20k),,Sangría Jarrita:15000|Sangría Jarra:35000|Fernet:20000,,si,
+milu,HAMBURGUESAS Y SÁNDWICHES,Hamburguesa,Hamburguesa clásica de la casa.,15000,,https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=200,si,
+milu,HAMBURGUESAS Y SÁNDWICHES,Hamburguesa doble,Doble porción de carne y sabor.,25000,,https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=200,si,
+milu,HAMBURGUESAS Y SÁNDWICHES,Sandwich,Sandwich especial con ingredientes frescos.,20000,,https://images.unsplash.com/photo-1550547660-d9450f859349?w=200,si,
+milu,HAMBURGUESAS Y SÁNDWICHES,Doble,Opción doble especial.,30000,,hamburgesa-milu.png,si,
+milu,HAMBURGUESAS Y SÁNDWICHES,Arabe,Sándwich estilo árabe.,25000,,lomito-arabe.jpg,si,
+milu,HAMBURGUESAS Y SÁNDWICHES,Solo carne,Porción especial de carne.,35000,,lomito-arabe.jpg,si,
+porkys,PIZZAS,Muzzarella,"Salsa, Muzzarella, Orégano.",40000,,https://images.unsplash.com/photo-1513104890138-7c749659a591?w=200,si,
+porkys,PIZZAS,Palmito,"Salsa, Muzzarella, Palmito, Orégano.",50000,,https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?w=200,si,
+porkys,PIZZAS,Aceituna,"Salsa, Muzzarella, Aceituna, Orégano.",50000,,https://images.unsplash.com/photo-1513104890138-7c749659a591?w=200,si,
+porkys,PIZZAS,Fugazzeta,"Salsa, Muzzarella, Cebolla Salteada, Orégano.",50000,,https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=200,si,
+porkys,PIZZAS,Panceta,"Salsa, Muzzarella, Panceta, Orégano.",50000,,https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=200,si,
+porkys,PIZZAS,Tomate al Ajo,"Salsa, Muzzarella, Tomate, Ajo, Orégano.",50000,,https://images.unsplash.com/photo-1513104890138-7c749659a591?w=200,si,
+porkys,PIZZAS,Napolitana,"Salsa, Muzzarella, Tomate, Jamón, Orégano.",50000,,https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=200,si,
+porkys,PIZZAS,3 Quesos,"Salsa, Muzzarella, Cheddar, Catupiry, Orégano.",50000,,https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=200,si,
+porkys,PIZZAS,Calabresa,"Salsa, Muzzarella, Calabresa, Orégano.",50000,,https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?w=200,si,
+porkys,PIZZAS,Pepperoni,"Salsa, Muzzarella, Pepperoni, Orégano.",50000,,https://images.unsplash.com/photo-1628840042765-356cda07504e?w=200,si,
+porkys,PIZZAS,Cebolla Morada,"Salsa, Muzzarella, Cebolla Morada, Orégano.",50000,,https://images.unsplash.com/photo-1513104890138-7c749659a591?w=200,si,
+porkys,PIZZAS,Jamón y Choclo,"Salsa, Muzzarella, Jamón, Choclo, Orégano.",55000,,https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=200,si,
+porkys,PIZZAS,Rúcula,"Salsa, Muzzarella, Rúcula, Rodaja de Tomate, Queso Rayado, Orégano.",55000,,https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=200,si,
+porkys,PIZZAS,Atún y Choclo,"Salsa, Muzzarella, Atún, Choclo, Orégano.",55000,,https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?w=200,si,
+porkys,PIZZAS,Pepperoni Catupiry,"Salsa, Muzzarella, Pepperoni, Catupiry, Orégano.",55000,,https://images.unsplash.com/photo-1628840042765-356cda07504e?w=200,si,
+porkys,PIZZAS,4 Quesos,"Salsa, Muzzarella, Cheddar, Cremoso, Parmesano, Orégano.",55000,,https://images.unsplash.com/photo-1513104890138-7c749659a591?w=200,si,
+porkys,PIZZAS,Hawaiana,"Salsa, Muzzarella, Jamón, Rodajas de Piña, Orégano.",55000,,https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=200,si,
+porkys,PIZZAS,Panceta y Huevo,"Salsa, Muzzarella, Panceta, Huevo, Orégano.",55000,,https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=200,si,
+porkys,PIZZAS,Champiñón,"Salsa, Muzzarella, Champiñón, Orégano.",55000,,https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?w=200,si,
+porkys,PIZZAS,Calabresa y Cebolla,"Salsa, Muzzarella, Calabresa, Cebolla Morada, Orégano.",55000,,https://images.unsplash.com/photo-1628840042765-356cda07504e?w=200,si,
+porkys,PIZZAS,Napolitana y Choclo,"Salsa, Muzzarella, Tomate, Jamón, Choclo, Orégano.",55000,,https://images.unsplash.com/photo-1513104890138-7c749659a591?w=200,si,
+porkys,PIZZAS,Margarita,"Salsa, Muzzarella, Tomate, Albahaca Fresca, Orégano.",55000,,https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=200,si,
+porkys,PIZZAS,Panceta al Ajo,"Salsa, Muzzarella, Panceta, Ajo, Orégano.",55000,,https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=200,si,
+porkys,PIZZAS,Chorizo Picante,"Salsa, Muzzarella, Chorizo Picante, Ají, Aceituna, Orégano.",55000,,https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?w=200,si,
+porkys,PIZZAS,Choclo Catupiry,"Salsa, Muzzarella, Choclo, Catupiry, Orégano.",55000,,https://images.unsplash.com/photo-1628840042765-356cda07504e?w=200,si,
+porkys,PIZZAS,Margarita al Ajo,"Salsa, Muzzarella, Tomate, Ajo, Albahaca Fresca, Orégano.",60000,,https://images.unsplash.com/photo-1513104890138-7c749659a591?w=200,si,
+porkys,PIZZAS,Panchito Cheddar,"Salsa, Muzzarella, Panchito, Cheddar, Orégano.",60000,,https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=200,si,
+porkys,PIZZAS,Pepperoni Toscano,"Salsa, Muzzarella, Pepperoni, Perejil Fresco, Cebolla Morada, Orégano.",60000,,https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=200,si,
+porkys,PIZZAS,Morrón,"Salsa, Muzzarella, Morrón (rojo-amarillo), Orégano.",60000,,https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?w=200,si,
+porkys,PIZZAS,Pollo Catupiry,"Salsa, Muzzarella, Pollo Triturado, Catupiry, Aceitunas, Orégano.",60000,,https://images.unsplash.com/photo-1628840042765-356cda07504e?w=200,si,
+porkys,PIZZAS,Panchito Encebollado,"Salsa, Muzzarella, Panchito, Cebolla Caramelizada, Orégano.",60000,,https://images.unsplash.com/photo-1513104890138-7c749659a591?w=200,si,
+porkys,PIZZAS,"Choclo, Jamón y Panceta","Salsa, Muzzarella, Choclo, Jamón, Panceta, Orégano.",60000,,https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=200,si,
+porkys,PIZZAS,Panceta Encebollada,"Salsa, Muzzarella, Panceta, Cebolla Caramelizada, Orégano.",60000,,https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=200,si,
+porkys,PIZZAS,Panceta y Cheddar,"Salsa, Muzzarella, Panceta, Cheddar, Orégano.",60000,,https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?w=200,si,
+porkys,PIZZAS,Pollo Con Barbacoa,"Salsa, Muzzarella, Pollo Triturado, Barbacoa, Orégano.",60000,,https://images.unsplash.com/photo-1628840042765-356cda07504e?w=200,si,
+porkys,PIZZAS,Chesseburguer,"Salsa, Muzzarella, Cheddar, Carne de Hamburguesa, Barbacoa, Orégano.",60000,,https://images.unsplash.com/photo-1513104890138-7c749659a591?w=200,si,
+porkys,PIZZAS,Pepperoni y Cheddar,"Salsa, Muzzarella, Cheddar, Pepperoni, Orégano.",60000,,https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=200,si,
+porkys,PIZZAS,"Panceta, Calabresa y Ajo","Salsa, Muzzarella, Panceta, Calabresa, Ajo, Orégano.",65000,,https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=200,si,
+porkys,PIZZAS,Queso Azul y Nueces,"Salsa, Muzzarella, Azul, Nueces, Orégano.",65000,,https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?w=200,si,
+porkys,PIZZAS,Portuguesa,"Salsa, Muzzarella, Jamón, Locote Verde, Choclo, Palmito, Huevo, Aceituna, Cebolla Morada, Orégano.",65000,,https://images.unsplash.com/photo-1628840042765-356cda07504e?w=200,si,
+porkys,PIZZAS,Napolitana Especial,"Salsa, Muzzarella, Jamón, Tomate, Locote Verde, Cebolla Morada, Orégano.",65000,,https://images.unsplash.com/photo-1513104890138-7c749659a591?w=200,si,
+porkys,PIZZAS,Vegetariana,"Salsa, Muzzarella, Choclo, Tomate, Aceituna, Cebolla Morada, Morrón Rojo-Amarillo, Orégano.",65000,,https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=200,si,
+porkys,PIZZAS,Primavera,"Salsa, Queso Muzzarella, Jamón, Tomate, Huevo, Aceitunas, Orégano.",65000,,https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=200,si,
+porkys,PIZZAS,Mediterránea,"Salsa, Muzzarella, Tomate Cherry, Aceitunas Negras, Albahaca Fresca, Orégano.",65000,,https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?w=200,si,
+porkys,PANCHOS,Pancho Clásico,"Mayonesa, Kétchup, Papitas.",15000,,https://images.unsplash.com/photo-1619740455993-9e612b1af08a?w=200,si,
+porkys,PANCHOS,Pancho Muzzarella,"Salsa, Muzzarella, Aceituna, Papitas, Orégano.",20000,,https://images.unsplash.com/photo-1619740455993-9e612b1af08a?w=200,si,
+porkys,PANCHOS,Pancho Cheddar y Panceta,"Salsa, Muzzarella, Cheddar, Panceta, Orégano.",25000,,https://images.unsplash.com/photo-1619740455993-9e612b1af08a?w=200,si,
+porkys,PANCHOS,Pancho Cheddar y Pepperoni,"Salsa, Muzzarella, Cheddar, Pepperoni, Orégano.",25000,,https://images.unsplash.com/photo-1619740455993-9e612b1af08a?w=200,si,
+porkys,PANCHOS,Pancho Napolitano,"Salsa, Muzzarella, Jamón, Tomate Cherry, Aceituna, Orégano.",25000,,https://images.unsplash.com/photo-1619740455993-9e612b1af08a?w=200,si,
+porkys,PANCHOS,Pancho Jamorrón,"Salsa, Muzzarella, Jamón, Morrón, Orégano.",25000,,https://images.unsplash.com/photo-1619740455993-9e612b1af08a?w=200,si,
+porkys,PANCHOS,Pancho Americano,"Salsa, Muzzarella, Cheddar, Pepinillo, Cebolla Morada, Orégano.",25000,,https://images.unsplash.com/photo-1619740455993-9e612b1af08a?w=200,si,
+porkys,PANCHOS,Pancho Italiano,"Salsa, Muzzarella, Pepperoni, Albahaca Fresca, Orégano.",25000,,https://images.unsplash.com/photo-1619740455993-9e612b1af08a?w=200,si,
+porkys,PANCHOS,Pancho Criollo,"Salsa, Muzzarella, Cebolla Caramelizada, Panceta, Orégano.",25000,,https://images.unsplash.com/photo-1619740455993-9e612b1af08a?w=200,si,
+porkys,PANCHOS,Pancho Choripancho,"Salsa, Muzzarella, Chorizo Picante, Ají, Cebolla Morada, Orégano.",25000,,https://images.unsplash.com/photo-1619740455993-9e612b1af08a?w=200,si,
+porkys,PANCHOS,Pancho Choclo,"Salsa, Muzzarella, Choclo, Catupiry, Orégano.",25000,,https://images.unsplash.com/photo-1619740455993-9e612b1af08a?w=200,si,
+porkys,PANCHOS,Pancho Especial,"Salsa, Muzzarella, Jamón, Huevo Picado, Mayonesa, Orégano.",25000,,https://images.unsplash.com/photo-1619740455993-9e612b1af08a?w=200,si,
+porkys,PANCHOS,Pancho Hawaiana,"Salsa, Muzzarella, Jamón, Piña, Panceta, Cebolla Caramelizada, Orégano.",30000,,https://images.unsplash.com/photo-1619740455993-9e612b1af08a?w=200,si,
+mysko,ALMUERZO CON GUARNICION,Bife a Caballo,Incluye guarnición.,45000,,,si,
+mysko,ALMUERZO CON GUARNICION,Milanesa de Carne,Incluye guarnición.,35000,,,si,
+mysko,ALMUERZO CON GUARNICION,Milanesa de Pollo,Incluye guarnición.,35000,,,si,
+mysko,ALMUERZO CON GUARNICION,Milanesa a la Napolitana,Incluye guarnición.,45000,,,si,
+mysko,ALMUERZO CON GUARNICION,Picaña a la Plancha,Incluye guarnición.,70000,,,si,
+mysko,GUARNICION,Pure de Papa,Porción de puré.,20000,,,si,
+mysko,GUARNICION,Arroz con Queso,Porción de arroz con queso.,15000,,,si,
+mysko,GUARNICION,Arroz al Ajo,Porción de arroz al ajo.,15000,,,si,
+mysko,GUARNICION,Fideo a la Manteca,Porción de fideos.,20000,,,si,
+mysko,GUARNICION,Papas Rústicas,Porción de papas rústicas.,20000,,,si,
+mysko,A BASE DE PESCADO,Cazuela de Surubi,Especial a base de pescado.,60000,,,si,
+mysko,A BASE DE PESCADO,Caldo de Pescado,Caldo caliente tradicional.,30000,,,si,
+mysko,A BASE DE PESCADO,Milanesa de Pescado,Milanesa elaborada con pescado.,70000,,,si,
+mysko,A BASE DE PESCADO,Fritiño,Plato a base de pescado frito.,40000,,,si,
+mysko,A BASE DE PESCADO,Romanita,Pescado a la romana.,60000,,,si,
+mysko,ENSALADA,Mixta,Ensalada mixta fresca.,20000,,,si,Ensalada Mixta
+mysko,ENSALADA,Alemana,Ensalada alemana.,20000,,,si,Ensalada Alemana
+mysko,ENSALADA,Pepino,Ensalada de pepino.,20000,,,si,Ensalada Pepino
+mysko,PICADA FRIA,Picada Fría (2 personas),"Bondiola, salamín, queso azul, pepinillo, huevo de codorniz, palmito, salame ahumado.",80000,,,si,Picada Fría 2 personas
+mysko,PICADA FRIA,Picada Fría (4 personas),"Bondiola, salamín, queso azul, pepinillo, huevo de codorniz, palmito, salame ahumado.",160000,,,si,Picada Fría 4 personas
+mysko,PICADA TRADICIONAL,Picada Tradicional (2 personas),"Milanesa de pollo, carne, empanada surtida, mandioca frita, aceituna, jamón, queso, chorizo, croqueta.",60000,,,si,Picada Tradicional 2 personas
+mysko,PICADA TRADICIONAL,Picada Tradicional (4 personas),"Milanesa de pollo, carne, empanada surtida, mandioca frita, aceituna, jamón, queso, chorizo, croqueta.",120000,,,si,Picada Tradicional 4 personas
+mysko,PIZZA,Mozzarella,Pizza clásica de mozzarella.,40000,,,si,Pizza Mozzarella
+mysko,PIZZA,Pepperoni,Pizza con pepperoni.,50000,,,si,Pizza Pepperoni
+mysko,PIZZA,Calabresa,Pizza con calabresa.,50000,,,si,Pizza Calabresa
+mysko,PIZZA,Napolitana,Pizza napolitana.,50000,,,si,Pizza Napolitana
+mysko,PIZZA,Pollo con Catupiry,Pizza de pollo con catupiry.,55000,,,si,Pizza Pollo con Catupiry
+mysko,PIZZA,Choclo Catupiry,Pizza de choclo con catupiry.,45000,,,si,Pizza Choclo Catupiry
+mysko,PIZZA,Fugazzeta,Pizza fugazzeta.,60000,,,si,Pizza Fugazzeta
+mysko,MINUTAS,Empanada de Carne,Empanada horneada o frita de carne.,5000,,,si,
+mysko,MINUTAS,Empanada de Pollo,Empanada de pollo.,5000,,,si,
+mysko,MINUTAS,Empanada de Pescado,Empanada de pescado.,7000,,,si,
+mysko,MINUTAS,Jamon y Queso,Empanada de jamón y queso.,5000,,,si,Empanada Jamon y Queso
+mysko,MINUTAS,Sándwich de Lomito,Sándwich completo de lomito.,25000,,,si,
+mysko,MINUTAS,Calzon de lomito (Personal),Calzon de lomito con salsa tuco.,40000,,,si,Calzon de lomito personal
+mysko,MINUTAS,Calzon de lomito (2 personas),Calzon de lomito con salsa tuco para compartir.,80000,,,si,Calzon de lomito 2 personas
+mysko,TRAGOS,Caipirinha,Trago clásico.,20000,,,si,
+mysko,TRAGOS,Daikiri,Trago refrescante.,20000,,,si,
+mysko,TRAGOS,Licor de chocolate,Trago de licor de chocolate.,20000,,,si,
+mysko,TRAGOS,Campari,Trago con Campari.,20000,,,si,Trago Campari
+mysko,TRAGOS,Fernet,Fernet preparado.,20000,,,si,
+mysko,POSTRE,Dulce de batata c/ dulce de leche,Postre tradicional.,10000,,,si,
+mysko,POSTRE,Dulce de durazno c/ chantilly,Postre de durazno con crema chantilly.,10000,,,si,
+mysko,POSTRE,Budin,Porción de budín.,10000,,,si,
+mysko,POSTRE,Creps con frutas,Crepes acompañados de frutas.,12000,,,si,
+mysko,BEBIDAS,AGUA 500ML,Agua mineral 500ml.,4000,,,si,
+mysko,BEBIDAS,SCHWEPPES 500ML,Schweppes 500ml.,8000,,,si,
+mysko,BEBIDAS,COCA COLA 250ML,Coca Cola 250ml.,4000,,,si,
+mysko,BEBIDAS,COCA COLA ZERO 250ML,Coca Cola Zero 250ml.,4000,,,si,
+mysko,BEBIDAS,PEPSI COLA 250ML,Pepsi Cola 250ml.,4000,,,si,
+mysko,BEBIDAS,COCA COLA 1LT,Coca Cola 1 Litro.,10000,,,si,
+mysko,BEBIDAS,FANTA 1LT,Fanta 1 Litro.,10000,,,si,
+mysko,BEBIDAS,SPRITE 1LT,Sprite 1 Litro.,10000,,,si,
+mysko,BEBIDAS,PEPSI COLA 1LT,Pepsi Cola 1 Litro.,10000,,,si,
+mysko,BEBIDAS,AGUA 2LT,Agua mineral 2 Litros.,8000,,,si,
+mysko,BEBIDAS,PURO SOL 200ML,Jugo Puro Sol 200ml.,5000,,,si,
+mysko,BEBIDAS,PURO SOL 1LT,Jugo Puro Sol 1 Litro.,12000,,,si,
+mysko,BEBIDAS,PULP 2LT,Pulp 2 Litros.,15000,,,si,
+mysko,BEBIDAS,PASO DE LOS TOROS 250ML,Paso de los Toros 250ml.,4000,,,si,
+mysko,BEBIDAS,GATORADE COOL BLUE,Bebida isotónica Gatorade.,15000,,,si,
+mysko,BEBIDAS,HEINEKEN 650ML,Cerveza Heineken 650ml.,20000,,,si,
+mysko,BEBIDAS,BUDWEISER 750ML,Cerveza Budweiser 750ml.,20000,,,si,
+mysko,BEBIDAS,CORONA 650ML,Cerveza Corona 650ml.,20000,,,si,
+mysko,BEBIDAS,SKOL 1LT,Cerveza Skol 1 Litro.,12000,,,si,
+mysko,BEBIDAS,PATAGONIA 1LT,Cerveza Patagonia 1 Litro.,20000,,,si,
+mysko,BEBIDAS,RED BULL LATA 250ML,Bebida energizante Red Bull.,16000,,,si,
+mysko,BEBIDAS,AMSTEL LATA 269ML,Cerveza Amstel lata.,8000,,,si,
+mysko,BEBIDAS,CAMPARI 750ML,Botella Campari 750ml.,120000,,,si,
+mysko,BEBIDAS,VINOS,Vino de la casa.,120000,,,si,
+mysko,BEBIDAS,HIELO EN CUBITO,Bolsa de hielo en cubito.,8000,,,si,
+mysko,BEBIDAS,CARBON,Bolsa de carbón.,12000,,,si,
+rolling,BURGER'S,Chesse Burger,"Pan Gourmet, 120 gr de carne, Queso cheddar, Mayo de la casa.",,Sola:20000|Combo:35000,https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=200,si,
+rolling,BURGER'S,BBQ Burger,"Pan Gourmet, 120 gr de carne, Pepinillo, Queso cheddar, Bacon, Salsa barbacoa.",,Sola:25000|Combo:40000,https://images.unsplash.com/photo-1521305916504-4a1121188589?w=200,si,
+rolling,BURGER'S,Classic Burger,"Pan gourmet, 120 gr de carne, Queso cheddar, Cebolla morada, Bacon, Salsa de la casa.",,Sola:25000|Combo:40000,https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=200,si,
+rolling,BURGER'S,Bacon Burger,"Pan Gourmet, Doble carne, Doble cheddar, Doble bacon, Salsa barbacoa, Salsa de la casa.",,Sola:30000|Combo:46000,https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=200,si,
+rolling,BURGER'S,American Burger,"Pan Gourmet, 120 gr de carne, Bacon, Queso cheddar, Lechuga y tomate, Cebolla morada, Salsa de la casa.",,Sola:26000|Combo:40000,https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=200,si,
+rolling,BURGER'S,Texas Burger,"Pan Gourmet, Doble carne, Doble cheddar, Bacon, Aros de cebolla, Salsa de la casa.",,Sola:30000|Combo:46000,https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=200,si,
+rolling,BURGER'S,Ayo Burger,"Pan Gourmet, Doble carne, Queso cheddar, Mozzarella, Bacon, Cebolla, Salsa de la casa.",,Sola:30000|Combo:45000,https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=200,si,
+rolling,BURGER'S,Arabe Rolling,"Pan Árabe, Carne y Pollo (mixto), Queso mozzarella, Repollo y tomate, Salsa.",,Sola:27000|Combo:45000,https://images.unsplash.com/photo-1628840042765-356cda07504e?w=200,si,
+rolling,BURGER'S,Sandwich de Lomito,"Pan Baguette, Carne lomito, Lechuga y tomate, Huevo, Queso mozzarella, Jamón, Salsa.",,Sola:27000|Combo:45000,https://images.unsplash.com/photo-1509722747041-616f39b57569?w=200,si,
+rolling,LOMITOS (PAN ÁRABE),Lomito Árabe Mixto,,27000,,https://images.unsplash.com/photo-1619881589316-56c7f9e6b587?w=200,si,
+rolling,LOMITOS (PAN ÁRABE),Lomito Árabe de Pollo,,25000,,https://images.unsplash.com/photo-1606755962773-d324e0a13086?w=200,si,
+rolling,LOMITOS (PAN ÁRABE),Lomito Árabe de Carne,,30000,,https://images.unsplash.com/photo-1544025162-d76694265947?w=200,si,
+rolling,PAPAS FRITAS,Papas Fritas Pequeña,,12000,,https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=200,si,
+rolling,PAPAS FRITAS,Papas Fritas Mediana,,18000,,https://images.unsplash.com/photo-1576107232684-1279f390859f?w=200,si,
+rolling,AGREGADOS,Extra carne,,10000,,,si,Agregado: Extra carne
+rolling,AGREGADOS,Pepinillos,,3000,,,si,Agregado: Pepinillos
+rolling,AGREGADOS,Bacon,,3000,,,si,Agregado: Bacon
+rolling,AGREGADOS,Cheddar,,3000,,,si,Agregado: Cheddar
+rolling,AGREGADOS,Cebolla,,2000,,,si,Agregado: Cebolla
+rolling,AGREGADOS,Huevo,,3000,,,si,Agregado: Huevo
+rolling,BEBIDAS,Coca Cola 250 ml,,5000,,,si,
+rolling,BEBIDAS,Coca Cola 500 ml,,10000,,,si,
+rolling,BEBIDAS,Coca Cola 1 litro,,12000,,,si,
+rolling,BEBIDAS,Agua Mineral,,5000,,,si,
+rolling,BEBIDAS,Skol,,7000,,,si,Cerveza Skol
+rolling,BEBIDAS,Munich Ultra,,6000,,,si,Cerveza Munich Ultra
+rolling,BEBIDAS,Heineken,,10000,,,si,Cerveza Heineken
+rolling,BEBIDAS,Coronita,,10000,,,si,Cerveza Coronita
+tia-tuty,PIZZAS,Muzzarella,"Personal / Normal (Salsa, muzzarella, aceituna, orégano).",,Personal:25000|Normal:40000,https://images.unsplash.com/photo-1513104890138-7c749659a591?w=200,si,
+tia-tuty,PIZZAS,Napolitana,"Personal / Normal (Salsa, muzzarella, jamón, tomate, aceituna).",,Personal:25000|Normal:40000,https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?w=200,si,
+tia-tuty,PIZZAS,Choclo,"Personal / Normal (Salsa, muzzarella, choclo, catupiry).",,Personal:25000|Normal:40000,https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=200,si,
+tia-tuty,PIZZAS,Margarita,"Personal / Normal (Salsa, muzzarella, tomate, orégano).",,Personal:25000|Normal:40000,https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=200,si,
+tia-tuty,PIZZAS,Mixta,"Personal / Normal (Salsa, muzzarella, jamón, orégano).",,Personal:25000|Normal:40000,https://images.unsplash.com/photo-1590947132387-155cc02f3212?w=200,si,
+tia-tuty,PIZZAS,Peperoni,"Personal / Normal (Salsa, muzzarella, peperoni, orégano).",,Personal:30000|Normal:45000,https://images.unsplash.com/photo-1628840042765-356cda07504e?w=200,si,
+tia-tuty,PIZZAS,Atún,"Personal / Normal (Salsa, muzzarella, atún, orégano).",,Personal:30000|Normal:45000,https://images.unsplash.com/photo-1513104890138-7c749659a591?w=200,si,
+tia-tuty,PIZZAS,Cuatro Quesos,"Personal / Normal (Muzzarella, cheddar, catupiry, queso py).",,Personal:30000|Normal:45000,https://images.unsplash.com/photo-1513104890138-7c749659a591?w=200,si,
+tia-tuty,PIZZAS,Pollo Catupiry,"Personal / Normal (Salsa, muzzarella, pollo, catupiry).",,Personal:35000|Normal:50000,https://images.unsplash.com/photo-1528137871618-79d2761e3fd5?w=200,si,
+tia-tuty,PIZZAS,Mexicana,"Personal / Normal (Carne picante, morrón, catupiry).",,Personal:35000|Normal:50000,https://images.unsplash.com/photo-1513104890138-7c749659a591?w=200,si,
+tia-tuty,PIZZAS,Portuguesa,"Personal / Normal (Cebolla/morrón salteados, huevo, aceitunas).",,Personal:35000|Normal:55000,https://images.unsplash.com/photo-1513104890138-7c749659a591?w=200,si,
+tia-tuty,PIZZAS,Palmito,"Personal / Normal (Salsa, muzzarella, palmito, catupiry).",,Personal:35000|Normal:50000,https://images.unsplash.com/photo-1513104890138-7c749659a591?w=200,si,
+tia-tuty,PIZZAS,Especial de la Casa,"Personal / Normal (Salchichas, cebolla y morrón salteado).",,Personal:35000|Normal:50000,https://images.unsplash.com/photo-1513104890138-7c749659a591?w=200,si,
+tia-tuty,PIZZAS,Carnívora,"Personal / Normal (Carne, salchichas, jamón, peperoni, pollo).",,Personal:45000|Normal:85000,https://images.unsplash.com/photo-1513104890138-7c749659a591?w=200,si,
+tia-tuty,PIZZAS,Pizza Tía Tuti,"Personal / Normal (Lomito, morrón, cebolla, catupiry).",,Personal:35000|Normal:60000,https://images.unsplash.com/photo-1513104890138-7c749659a591?w=200,si,
+tia-tuty,HAMBURGUESAS CASERAS,Hamburguesa Clásica,"Pan Gourmet, mayonesa, tomate, lechuga, carne, jamón, cheddar, huevo.",15000,,https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=200,si,
+tia-tuty,HAMBURGUESAS CASERAS,Hamburguesa Doble Carne,"Pan Gourmet, mayonesa, tomate, lechuga, dos carnes, jamón, cheddar, huevo.",23000,,https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=200,si,
+tia-tuty,HAMBURGUESAS CASERAS,Hamburguesa Tía Tuti,"Pan Gourmet, doble carne, doble cheddar, huevo, panceta, choclo, lechuga, tomate.",30000,,https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=200,si,
+tia-tuty,HAMBURGUESAS CASERAS,Hamburguesa Completa,"Pan Gourmet, carne, huevo, cheddar, jamón, lechuga, tomate, papas fritas.",25000,,https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=200,si,
+tia-tuty,LOMITOS Y LOMIPIZZAS,Sandw. de Lomito,"Pan baguette, lomito, huevo, jamón, cheddar, tomate, lechuga.",25000,,https://images.unsplash.com/photo-1550547660-d9450f859349?w=200,si,
+tia-tuty,LOMITOS Y LOMIPIZZAS,Lomipizza Personal,"Pan, lomito, huevo, cheddar, queso, peperoni, tomate, lechuga, jamón.",32000,,https://images.unsplash.com/photo-1513104890138-7c749659a591?w=200,si,
+tia-tuty,LOMITOS Y LOMIPIZZAS,Lomipizza Grande,"4 porciones (Pan, lomito, huevo, cheddar, queso, peperoni, jamón).",70000,,https://images.unsplash.com/photo-1513104890138-7c749659a591?w=200,si,
+tia-tuty,LOMITOS Y LOMIPIZZAS,Lomipizza Familiar,"8 porciones (Pan, lomito, huevo, cheddar, queso, peperoni, jamón).",125000,,https://images.unsplash.com/photo-1513104890138-7c749659a591?w=200,si,
+tia-tuty,HAMBURPIZZAS,Hamburpizza Personal,"Pan baguette, doble carne, cheddar, huevo, muzzarella, peperoni.",30000,,https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=200,si,
+tia-tuty,HAMBURPIZZAS,Hamburpizza Grande,"4 porciones (Pan, carne, huevo, cheddar, jamón, muzzarella).",65000,,https://images.unsplash.com/photo-1513104890138-7c749659a591?w=200,si,
+tia-tuty,HAMBURPIZZAS,Hamburpizza Familiar,"8 porciones (Pan, carne, huevo, cheddar, jamón, muzzarella).",120000,,https://images.unsplash.com/photo-1513104890138-7c749659a591?w=200,si,
+tia-tuty,ÁRABES Y ESPECIALIDADES,Árabe de Pollo,"Pollo, repollo, tomate, queso muzzarella, salsa.",25000,,https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?w=200,si,
+tia-tuty,ÁRABES Y ESPECIALIDADES,Árabe Mixto,"Lomito, pollo, queso muzzarella, repollo, salsa, tomate, carne.",28000,,https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?w=200,si,
+tia-tuty,ÁRABES Y ESPECIALIDADES,Churrasco Griego,"Pan baguette, lomito, pollo, repollo, tomate, muzzarella, catupiry.",28000,,https://images.unsplash.com/photo-1544025162-d76694265947?w=200,si,
+tia-tuty,ÁRABES Y ESPECIALIDADES,Pollo Frito,Porción de pollo frito crujiente.,30000,,https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=200,si,
+tia-tuty,PICADAS Y MILAS,Picada Pequeña,"Milanesas, papas, jamón, queso, croquetas, aceitunas.",50000,,https://images.unsplash.com/photo-1541529086526-db283c563270?w=200,si,
+tia-tuty,PICADAS Y MILAS,Picada Mediana,"Chorizos, mandioca, milanesas, papas, jamón, queso, croquetas.",80000,,https://images.unsplash.com/photo-1541529086526-db283c563270?w=200,si,
+tia-tuty,PICADAS Y MILAS,Picada Grande,"Chorizos, mandioca, milanesas, croquetas, papas, jamón, queso.",100000,,https://images.unsplash.com/photo-1541529086526-db283c563270?w=200,si,
+tia-tuty,PICADAS Y MILAS,Milapizza (Pollo / Carne),"Con salsa, queso, jamón, tomate, aceitunas, mandioca y papas.",,Milapizza Pollo:45000|Milapizza Carne:50000,https://images.unsplash.com/photo-1513104890138-7c749659a591?w=200,si,
+tia-tuty,PICADAS Y MILAS,Milanesa c/guarnición,"Acompañado con huevo, mandioca y papas fritas.",,Milanesa Pollo Completa:45000|Milanesa Carne Completa:50000,https://images.unsplash.com/photo-1544025162-d76694265947?w=200,si,
+tia-tuty,MINUTAS Y EXTRAS,Super Pancho,Pan de pancho con salchicha y salsas.,15000,,https://images.unsplash.com/photo-1619740455993-9e612b1af08a?w=200,si,
+tia-tuty,MINUTAS Y EXTRAS,Super Pancho a la Pizza,Pancho cubierto con salsa y queso muzzarella gratinado.,20000,,https://images.unsplash.com/photo-1619740455993-9e612b1af08a?w=200,si,
+tia-tuty,MINUTAS Y EXTRAS,Sandw. de Milanesas,Sándwich de milanesa completo (Carne / Pollo).,,Sandw. Milanesa Carne:12000|Sandw. Milanesa Pollo:10000,https://images.unsplash.com/photo-1550547660-d9450f859349?w=200,si,
+tia-tuty,MINUTAS Y EXTRAS,Empanadas Caseras,Carne y jamón / Pollo catupiry / Tradicional.,,Empanada Carne y Jamón:6000|Empanada Pollo Catupiry:6000|Empanada Tradicional:5000,https://images.unsplash.com/photo-1601050690597-df0568f70950?w=200,si,
+tia-tuty,MINUTAS Y EXTRAS,Papas Fritas,Porción de papas fritas crujientes.,10000,,https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=200,si,Papas Fritas Pequeña
+valhalla,HAMBURGUESAS Y ÁRABES,Kids Burger,"Pan gourmet, 120gr de carne casera, queso cheddar, salsa de la casa.",17000,,https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=200,si,
+valhalla,HAMBURGUESAS Y ÁRABES,Cuarto de Libra,"Pan gourmet, 120gr de carne casera, queso cheddar, panceta, cebolla caramelizada, salsa de la casa.",20000,,https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=200,si,
+valhalla,HAMBURGUESAS Y ÁRABES,Valquiria,"Pan gourmet, 120gr de carne casera, queso cheddar, panceta, cebolla caramelizada, tomate, lechuga, pimentón asado, salsa de la casa.",24000,,https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=200,si,
+valhalla,HAMBURGUESAS Y ÁRABES,Berserker,"Pan gourmet, doble carne casera de 120gr, doble queso cheddar, doble panceta, queso catupiry, cebolla caramelizada, salsa de la casa.",32000,,https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=200,si,
+valhalla,HAMBURGUESAS Y ÁRABES,Araburger,"Pan árabe, carne de vacío 120gr, doble queso cheddar, queso catupiry, panceta, repollo, tomate y salsa de la casa.",28000,,https://images.unsplash.com/photo-1628840042765-356cda07504e?w=200,si,
+valhalla,HAMBURGUESAS Y ÁRABES,Golden Burger,"Pan gourmet, doble carne de 120gr, queso cheddar x4, salsa de la casa.",27000,,https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=200,si,
+valhalla,PAPAS FRITAS,Papas Pequeñas,"Porción individual de papas fritas, crujientes y doradas.",10000,,https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=200,si,
+valhalla,PAPAS FRITAS,Papas Medianas,"Porción mediana, ideal para acompañar tu menú de la parrilla.",15000,,https://images.unsplash.com/photo-1576107232684-1279f390859f?w=200,si,
+valhalla,AGREGADOS,Agregado de Carne,,8000,,https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?w=200,si,
+valhalla,AGREGADOS,Agregado de Panceta,,4000,,https://images.unsplash.com/photo-1606851094655-b2593a9af63f?w=200,si,
+valhalla,AGREGADOS,Agregado de Cheddar,,3000,,hamburpizza-los-abuelos.jpg,si,
+valhalla,AGREGADOS,Agregado de Pepinillo,,3000,,hamburpizza-los-abuelos.jpg,si,
+valhalla,AGREGADOS,Agregado de Katupiry,,3000,,https://images.unsplash.com/photo-1558818498-28c1e002b655?w=200,si,
+valhalla,AGREGADOS,Agregado de Huevo,,2000,,https://images.unsplash.com/photo-1525059696034-4967a8e1dca2?w=200,si,
+valhalla,AGREGADOS,Agregado de Choclo,,2000,,https://images.unsplash.com/photo-1551754655-cd27e38d2076?w=200,si,
+acai,CAMADINHAS,Tradicional,"Açaí, leche en polvo, leche condensada, granola y banana.",,240ml:15000|330ml:20000|440ml:25000|550ml:30000,acai-banner-berry.jpg,si,
+acai,CAMADINHAS,Oreo,"Açaí, leche en polvo, leche condensada, oreo y nutella.",,240ml:15000|330ml:20000|440ml:25000|550ml:30000,acai-banner-berry.jpg,si,
+acai,CAMADINHAS,Tres Leches,"Açaí, leche en polvo, leche condensada y dulce de leche.",,240ml:13000|330ml:18000|440ml:23000|550ml:28000,acai-banner-berry.jpg,si,
+acai,Variedades de Açaí,Açaí Blanco,"Pasta de leche con cookies, dos agregados a elección.",,240ml:20000|330ml:25000|440ml:30000|550ml:35000,,si,
+acai,Variedades de Açaí,Açaí Negro,"Pasta de brownie con cookies y castaña de cajú, más dos agregados.",,240ml:18000|330ml:23000|440ml:28000|550ml:33000,,si,
+acai,Variedades de Açaí,Açaí Verde,"Pasta de pistacho, más dos agregados.",,240ml:20000|330ml:25000|440ml:30000|550ml:35000,,si,
+acai,Variedades de Açaí,Fruta de açaí (Solo en temporada),"Banana, kiwi, durazno y frutilla.",,330ml:20000|440ml:25000,,si,
+acai,Variedades de Açaí,Açaí Dubai,"Pistacho, kataifi, bañado de chocolate y açaí.",,330ml:30000|440ml:35000,,si,
+acai,Variedades de Açaí,Helado + Açaí,Combinación deliciosa de helado suave con açaí.,,330ml:20000|440ml:25000,,si,
+acai,TRUFADOS Y PRESENTACIONES 1KG,Açaí Trufado Avellana,Más dos agregados a elección.,,330ml:25000|440ml:30000,,si,
+acai,TRUFADOS Y PRESENTACIONES 1KG,Açaí Trufado Leitinho,Más dos agregados a elección.,,330ml:25000|440ml:30000,,si,
+acai,TRUFADOS Y PRESENTACIONES 1KG,Capa de Açaí 1 Kg,¡Disfruta de la mejor camadinha de Açaí en tamaño familiar!,,1kg:65000|1kg:70000|1kg:70000,,si,
+acai,TRUFADOS Y PRESENTACIONES 1KG,Tazón de açaí,Incluye +4 agregados a elección.,25000,,acai-banner-berry.jpg,si,Açaí Bowl (+4 agregados)
+acai,POSTRES Y HELADOS,Gran poste,,16000,,,si,Paletto Grande
+acai,POSTRES Y HELADOS,Franuí,,45000,,,si,
+acai,POSTRES Y HELADOS,Helado Artesanal (cada 100gr),,6500,,,si,Helado Artesanal (100gr)
+amandau,VASITOS,Vasito Chico,1 bocha.,12000,,,si,
+amandau,VASITOS,Vasito Mediano,2 bochas.,19000,,,si,
+amandau,VASITOS,Vasito Grande,3 bochas.,22000,,,si,
+amandau,KILO,1/4 Kilo,2 sabores.,25000,,,si,
+amandau,KILO,1/2 Kilo,3 sabores.,41000,,,si,
+amandau,KILO,1 Kilo,4 sabores.,72000,,,si,
+amandau,CUCURUCHOS,Cucurucho Chico,1 bocha.,12000,,,si,
+amandau,CUCURUCHOS,Cucurucho Mediano,2 bochas.,19000,,,si,
+amandau,CUCURUCHOS,Cucurucho Grande,3 bochas.,22000,,,si,
+amandau,CUCURUCHOS,Cucuruchón,3 bochas + 1 topping.,24000,,,si,
+amandau,COPAS,Copa Amandau,Helado americana y vainilla con chocolate blanco y jalea de dulce de leche.,24000,,,si,
+amandau,COPAS,Copa Mbareté,Helado americana y dulce de leche con galletitas chocolate (aventura black) y jalea.,24000,,,si,
+amandau,COPAS,Copa Açaí 300ml,"Açaí con banana, frutilla, durazno, granola, leche condensada y en polvo.",24000,,,si,
+amandau,COPAS,Copa Más,Helado americana y frutilla con chocolate semiamargo y jalea de frutilla.,24000,,,si,
+amandau,COPAS,Copa Chock,Helado americana y chocolate con confitado (rocklets) y jalea de chocolate.,24000,,,si,
+amandau,COPAS,Copa Açaí 500ml,"Açaí grande con banana, frutilla, durazno, granola y leches.",32000,,,si,
+amandau,COPAS,Personalizá tu copa,2 bochas + 2 toppings a elección + jalea extra.,28000,,,si,
+amandau,COPAS,Copa Mix,Americana/Chocolate o Americana/Frutilla.,11500,,,si,
+amandau,COPAS,Copa Diet,Opciones dietéticas combinadas.,13000,,,si,
+amandau,COPAS,Copa Gourmet,Pistacho.,25000,,,si,
+amandau,BATIDOS,Milkshake 300ml,Batido de helado.,22000,,,si,
+amandau,BATIDOS,Milkshake 500ml,Batido de helado grande.,32000,,,si,
+amandau,BATIDOS,Ice Cream Cola,Helado con gaseosa.,32000,,,si,
+amandau,PALITOS,Palito Frutal,Frutilla o Naranja.,4000,,,si,
+amandau,PALITOS,Palito Osito,Palito infantil clásico.,6500,,,si,
+amandau,PALITOS,Palito Rohayhu,Bombón Americana.,7500,,,si,
+amandau,PALITOS,Sándwich Helado,Americana con galletitas sabor chocolate.,8000,,,si,
+amandau,PALITOS,Palito Relleno,"Frutilla con leche condensada, chocolate, banana split o frutos del bosque.",8000,,,si,
+amandau,PALITOS,Palito Bombón,Americana o Dulce de Leche bañado en chocolate.,9000,,,si,
+amandau,PALITOS,Palito Alfajor Helado,Especial alfajor helado.,11000,,,si,
+amandau,PALITOS,Palito Bombón Diet,Versión dietética.,14000,,,si,
+amandau,PALITOS,Palito Crock Gourmet,Americana o Dulce de Leche.,16000,,,si,
+amandau,"POTE, POSTRES Y TORTAS","Pote Classic 1,3L","Americana, Dulce de Leche, Granizado.",44000,,,si,
+amandau,"POTE, POSTRES Y TORTAS",Postre Almendrado,Clásico postre almendrado.,45000,,,si,
+amandau,"POTE, POSTRES Y TORTAS",Pote Classic 2L,"Napolitano, Choco+Dulce de Leche.",60000,,,si,
+amandau,"POTE, POSTRES Y TORTAS",Postres Gourmet,"Frutilla con Leche Condensada, 3 Leches.",65000,,,si,
+amandau,"POTE, POSTRES Y TORTAS",Torta Classic,"Merengue, Selva Negra.",75000,,,si,
+amandau,"POTE, POSTRES Y TORTAS",Torta Gourmet,"Frutilla Explosión, Dulce Explosión.",85000,,,si,
+amandau,CONFITERÍA,Brownie,Bizcochuelo sabor chocolate con trozos sabor chocolate.,9000,,,si,
+amandau,CONFITERÍA,Brownie con helado,"Con 1 bocha de helado (americana, chocolate belga, dulce de leche o frutilla).",15000,,,si,
+amandau,CONFITERÍA,Medialuna tradicional,Medialunas de manteca.,5000,,,si,
+amandau,CONFITERÍA,Medialuna con relleno,Rellenas de Dulce de Leche o Dulce de Guayaba.,6000,,,si,
+amandau,TOPPINGS Y AGREGADOS,Topping Adicional,"Lluvia de chocolate, rocklets, granas o frutos secos.",4000,,,si,
+amandau,TOPPINGS Y AGREGADOS,Jalea Extra,"Baño de jalea de frutilla, chocolate o dulce de leche.",4000,,,si,
+amandau,TOPPINGS Y AGREGADOS,Bocha Adicional,Agregá una bocha extra de tu sabor favorito a cualquier pedido.,6000,,,si,
+burgerland,HAMBURGUESAS,Simple,"Pan gourmet, lechuga, tomate, carne, queso, salsa de la casa.",20000,,https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=200,si,
+burgerland,HAMBURGUESAS,Completa,"Pan gourmet, lechuga, tomate, carne, queso, cebolla, huevo, salsa de la casa.",28000,,https://images.unsplash.com/photo-1550547660-d9450f859349?w=200,si,
+burgerland,HAMBURGUESAS,Panceta y Cebolla,"Pan gourmet, cebolla caramelizada, carne, panceta, queso, salsa de la casa.",28000,,https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=200,si,
+burgerland,HAMBURGUESAS,Doble Carne,"Pan gourmet, lechuga, tomate, doble carne, queso, cebolla, huevo, salsa de la casa.",38000,,https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=200,si,
+burgerland,LOMITOS,Árabe Mixto,"Pan Árabe, pollo, carne, lechuga, tomate, queso, cebolla caramelizada, salsa de la casa.",30000,,https://images.unsplash.com/photo-1628840042765-356cda07504e?w=200,si,
+burgerland,LOMITOS,Sándwich de Lomito,"Pan gourmet, lechuga, tomate, cebolla caramelizada, carne, queso, huevo, salsa de la casa.",35000,,https://images.unsplash.com/photo-1544025162-d76694265947?w=200,si,
+burgerland,PAPAS FRITAS,Papas Fritas Simple,"Porción individual de papas fritas clásicas, crujientes y doradas.",12000,,https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=200,si,
+burgerland,BEBIDAS,Cerveza,"Bien fría, el complemento ideal para tus hamburguesas y lomitos.",10000,,https://images.unsplash.com/photo-1608270586620-248524c67de9?w=200,si,
+burgerland,BEBIDAS,Gaseosa 500 ml,Botella refrescante (variedad de sabores de la línea).,10000,,https://images.unsplash.com/photo-1622483767028-3f66f32aef97?w=200,si,
+burgerland,AGREGADOS,Agregado Cheddar,Sumá una porción extra de delicioso queso cheddar fundido.,4000,,extra-chedar.png,si,
+burgerland,AGREGADOS,Agregado Panceta,Sumá más panceta crujiente y ahumada a tu elección.,4000,,https://images.unsplash.com/photo-1606851094655-b2593a9af63f?w=200,si,
+burgerland,AGREGADOS,Agregado Huevo,Sumá un huevo cocinado en su punto justo a tu plato.,4000,,https://images.unsplash.com/photo-1525059696034-4967a8e1dca2?w=200,si,
+burgerland,AGREGADOS,Agregado Mozzarella,Sumá una porción extra de queso mozzarella suave y elástico.,4000,,https://images.unsplash.com/photo-1558818498-28c1e002b655?w=200,si,
+mainumby,NUESTRAS PIZZAS,Pizza Muzzarella,"Clásica, con abundante muzzarella y salsa de la casa.",30000,,https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?w=200,si,
+mainumby,NUESTRAS PIZZAS,Pizza Jamón,Muzzarella y finas fetas de jamón.,35000,,https://images.unsplash.com/photo-1513104890138-7c749659a591?w=200,si,
+mainumby,NUESTRAS PIZZAS,Pizza Peperoni,Muzzarella con rodajas de peperoni.,35000,,https://images.unsplash.com/photo-1628840042765-356cda07504e?w=200,si,
+mainumby,NUESTRAS PIZZAS,Pizza Palmito,Muzzarella y tiernos palmitos seleccionados.,35000,,https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=200,si,
+mainumby,NUESTRAS PIZZAS,Pizza Choclo,Muzzarella y granos de choclo tierno.,35000,,https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=200,si,
+mainumby,NUESTRAS PIZZAS,Pizza Mixto,Combinación especial de la casa.,35000,,https://images.unsplash.com/photo-1590947132387-155cc02f3212?w=200,si,
+mainumby,NUESTRAS PIZZAS,Pizza Catupiri,Exquisita capa de queso catupiri.,35000,,https://images.unsplash.com/photo-1513104890138-7c749659a591?w=200,si,
+mainumby,NUESTRAS PIZZAS,Pizza Primavera,Con ingredientes frescos y coloridos.,35000,,https://images.unsplash.com/photo-1595731343162-8114674724b0?w=200,si,
+mainumby,NUESTRAS PIZZAS,Pizza Napolitana,"Muzzarella, rodajas de tomate fresco y ajos tiernos.",35000,,https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?w=200,si,
+mainumby,NUESTRAS PIZZAS,Carne Catupiri,Carne seleccionada y cremoso catupiri.,35000,,https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=200,si,
+mainumby,NUESTRAS PIZZAS,Pollo Catupiri,Trocitos de pollo jugoso con catupiri.,35000,,https://images.unsplash.com/photo-1528137871618-79d2761e3fd5?w=200,si,
+mainumby,NUESTRAS PIZZAS,Peperoni - Muzzarella,Doble intensidad de muzzarella y peperoni.,35000,,https://images.unsplash.com/photo-1628840042765-356cda07504e?w=200,si,
+kokoro,ALITAS (Incluye mandioca frita y 1 salsa),Alitas x 5,"Incluye mandioca frita y una salsa a elección (Ajo, Verdeo o Golf).",25000,,alitas-kokoro.jpeg,si,
+kokoro,ALITAS (Incluye mandioca frita y 1 salsa),Alitas x 7,"Incluye mandioca frita y una salsa a elección (Ajo, Verdeo o Golf).",37000,,alitas-kokoro.jpeg,si,
+kokoro,ALITAS (Incluye mandioca frita y 1 salsa),Alitas x 10,"Incluye mandioca frita y una salsa a elección (Ajo, Verdeo o Golf).",50000,,alitas-kokoro.jpeg,si,
+kokoro,CHICKEN TENDERS,Chicken Tenders x 7,Incluye mandioca frita y una salsa a elección.,28000,,chiken-kokoro.jpeg,si,
+kokoro,CHICKEN TENDERS,Chicken Tenders x 15,Incluye mandioca frita y una salsa a elección.,50000,,chiken-kokoro.jpeg,si,
+kokoro,CHICKEN TENDERS,Chicken Tenders x 22,Incluye mandioca frita y una salsa a elección.,75000,,chiken-kokoro.jpeg,si,
+kokoro,ADICIONALES,Salsa Adicional,"Elige entre Ajo, Verdeo o Golf.",2000,,ajo-kokoro.jpeg,si,
+pena,HAMBURGUESAS,Clásica,Hamburguesa tradicional.,15000,,https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=200,si,
+pena,HAMBURGUESAS,Bacon,Hamburguesa con crujiente tocino.,18000,,https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=200,si,
+pena,HAMBURGUESAS,Doble carne,Doble porción de carne jugosa.,23000,,https://images.unsplash.com/photo-1550547660-d9450f859349?w=200,si,
+pena,HAMBURGUESAS,Triple carne,Triple porción de carne para mayor apetito.,30000,,https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=200,si,
+pena,HAMBURGUESAS,La Peña,"Doble carne, panceta y extra queso cheddar.",30000,,https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=200,si,
+pena,LOMITO ÁRABE,Mixto,Lomito árabe tradicional estilo La Peña.,25000,,https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?w=200,si,Lomito Mixto
+pena,LOMITO ÁRABE,Mbarete,Con panceta y huevo.,30000,,https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?w=200,si,Lomito Mbarete
+pena,PIZZAS,Muzzarella,"Salsa, Muzzarella, Orégano.",45000,,https://images.unsplash.com/photo-1513104890138-7c749659a591?w=200,si,Pizza Muzzarella
+pena,PIZZAS,Choclo,"Salsa, Muzzarella, Choclo, Orégano.",45000,,https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=200,si,Pizza Choclo
+pena,PIZZAS,Jamón y queso,"Salsa, Muzzarella, Jamón, Orégano.",45000,,https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?w=200,si,Pizza Jamón y queso
+pena,PIZZAS,Cheddar,"Salsa, Muzzarella, Queso Cheddar, Orégano.",45000,,https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=200,si,Pizza Cheddar
+pena,PIZZAS,Napolitana,"Salsa, Muzzarella, Tomate, Orégano.",45000,,https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=200,si,Pizza Napolitana
+pena,PIZZAS,Peperonni,"Salsa, Muzzarella, Peperonni, Orégano.",50000,,https://images.unsplash.com/photo-1628840042765-356cda07504e?w=200,si,Pizza Peperonni
+pena,PIZZAS,Calabresa,"Salsa, Muzzarella, Calabresa, Orégano.",50000,,https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?w=200,si,Pizza Calabresa
+pena,PIZZAS,Pollo catupiry,"Salsa, Muzzarella, Pollo, Catupiry, Orégano.",50000,,https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=200,si,Pizza Pollo catupiry
+pena,PIZZAS,Carnívora,Variedad de carnes y embutidos con muzzarella.,60000,,https://images.unsplash.com/photo-1513104890138-7c749659a591?w=200,si,Pizza Carnívora
+pena,PAPAS FRITAS,Mediana,Porción mediana de papas fritas crujientes.,12000,,https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=200,si,Papas Mediana
+pena,PAPAS FRITAS,Grande,Porción grande de papas fritas.,20000,,https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=200,si,Papas Grande
+pena,PAPAS FRITAS,Salchipapa,Papas fritas con rodajas de salchicha.,25000,,https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?w=200,si,
+pena,PAPAS FRITAS,Panceta y cheddar,Papas fritas cubiertas de cheddar fundido y panceta.,25000,,https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=200,si,Papas Panceta y cheddar
+estacion,HAMBURGUESAS,Simple,"Pan gourmet, 110 g de carne, tomate, lechuga, ketchup y mayonesa.",20000,,https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=200,si,
+estacion,HAMBURGUESAS,Completa,"Pan gourmet, 110 g de carne, queso cheddar, panceta, cebolla morada, huevo, tomate, lechuga, ketchup y mayonesa.",30000,,https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=200,si,
+estacion,HAMBURGUESAS,Barbacoa,"Pan gourmet, 110 g de carne, queso mozzarella, panceta, pepinillos, salsa barbacoa.",30000,,https://images.unsplash.com/photo-1521305916504-4a1121188589?w=200,si,
+estacion,HAMBURGUESAS,Doble Cheese Bacon,"Pan gourmet, doble 110 g de carne, doble panceta, doble cheddar, salsa de la casa.",35000,,https://images.unsplash.com/photo-1553979459-d2229ba7433b?w=200,si,
+estacion,HAMBURGUESAS,Catuburguer,"Pan gourmet, 110 g de carne, queso catupiry, cebolla, tomate y mayonesa.",30000,,https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=200,si,
+estacion,HAMBURGUESAS,La Estación,"Pan gourmet, doble 110 g de carne, doble queso cheddar, doble panceta, pepinillos, cebollita, salsa de la casa.",40000,,https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=200,si,
+estacion,PAPAS FRITAS,Chico,,10000,,https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=200,si,Papas Fritas Chico
+estacion,PAPAS FRITAS,Mediano,,15000,,https://images.unsplash.com/photo-1576107232684-1279f390859f?w=200,si,Papas Fritas Mediano
+estacion,PAPAS FRITAS,Grande,,20000,,https://images.unsplash.com/photo-1576107232684-1279f390859f?w=200,si,Papas Fritas Grande
+estacion,PIZZAS,Mozzarella,"Salsa de tomate, queso mozzarella, aceituna y orégano.",40000,,https://images.unsplash.com/photo-1513104890138-7c749659a591?w=200,si,Pizza Mozzarella
+estacion,PIZZAS,Jamón y Queso,"Salsa de tomate, queso mozzarella, jamón, aceituna y orégano.",40000,,https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=200,si,Pizza Jamón y Queso
+estacion,PIZZAS,Choclo,"Salsa de tomate, queso mozzarella, choclo, aceituna y orégano.",40000,,https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=200,si,Pizza Choclo
+estacion,PIZZAS,Palmito,"Salsa de tomate, queso mozzarella, palmito, aceituna y orégano.",50000,,https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?w=200,si,Pizza Palmito
+estacion,PIZZAS,Pepperoni,"Salsa de tomate, queso mozzarella, pepperoni, aceituna y orégano.",50000,,https://images.unsplash.com/photo-1628840042765-356cda07504e?w=200,si,Pizza Pepperoni
+estacion,PIZZAS,Pollo Catupiry,"Salsa de tomate, queso mozzarella, pollo, queso catupiry, aceituna y orégano.",55000,,https://images.unsplash.com/photo-1513104890138-7c749659a591?w=200,si,Pizza Pollo Catupiry
+estacion,PIZZAS,Barbacoa,"Salsa de tomate, queso mozzarella, pollo, locote, cebolla morada, salsa barbacoa, aceituna y orégano.",55000,,https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=200,si,Pizza Barbacoa
+estacion,PIZZAS,La Estación Hot,"Salsa de tomate, queso mozzarella, carne vacuna, cebolla, panceta, salsa picante, aceituna y orégano.",65000,,https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=200,si,Pizza La Estación Hot
+estacion,PIZZAS,Lomi Pizza La Estación,"Salsa de tomate, queso mozzarella, carne, jamón, huevo, lechuga, aceituna y orégano.",120000,,https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?w=200,si,
+estacion,PIZZAS,Pizza Napolitana,"Salsa de tomate, queso mozzarella, tomate, aceituna y orégano.",58000,,https://images.unsplash.com/photo-1513104890138-7c749659a591?w=200,si,
+estacion,PIZZAS,Pizza Tres Queso Gourmet,"Salsa de tomate, queso mozzarella, queso catupiry, queso cheddar, aceituna y orégano.",60000,,https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=200,si,
+estacion,PIZZAS,Pizza Calabresa,"Salsa de tomate, queso mozzarella, calabresa, aceituna y orégano.",63000,,https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=200,si,
+estacion,PIZZAS,Pizza Katu & Lomi,"Salsa de tomate, queso mozzarella, carne, queso catupiry, aceituna y orégano.",80000,,https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?w=200,si,Pizza Katu &amp; Lomi
+estacion,PIZZAS,Pizza Mexicana Hot,"Salsa de tomate, queso mozzarella, carne, morrón, cebolla, picante, aceituna y orégano.",70000,,https://images.unsplash.com/photo-1513104890138-7c749659a591?w=200,si,
+estacion,PIZZAS,Pizza de Atún Lomito,"Salsa de tomate, queso mozzarella, atún, aceituna y orégano.",65000,,https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=200,si,
+estacion,PIZZAS,Pizza Fugazzeta,"Salsa de tomate, queso mozzarella, cebolla, aceituna y orégano.",55000,,https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=200,si,
+estacion,PIZZAS,Pizza Champiñón Deluxe,"Salsa de tomate, queso mozzarella, champiñón blanco, aceituna y orégano.",63000,,https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?w=200,si,
+estacion,PIZZAS,Pizza Katu & Papa,"Salsa de tomate, queso mozzarella, papas fritas, queso catupiry, aceituna y orégano.",70000,,https://images.unsplash.com/photo-1513104890138-7c749659a591?w=200,si,Pizza Katu &amp; Papa
+estacion,PIZZAS,Pizza Bacon & Cheddar,"Salsa de tomate, queso mozzarella, panceta, queso cheddar, aceituna y orégano.",70000,,https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=200,si,Pizza Bacon &amp; Cheddar
+estacion,PIZZAS,Pizza Kutu & Bacon,"Salsa de tomate, queso mozzarella, panceta, queso catupiry, aceituna y orégano.",68000,,https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=200,si,Pizza Kutu &amp; Bacon
+estacion,PIZZAS,Picaña al Ajillo,"Salsa de tomate, queso mozzarella, picaña al ajo, aceituna y orégano.",70000,,https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?w=200,si,Pizza Picaña al Ajillo
+estacion,PIZZAS,Pizza Primavera,"Salsa de tomate, queso mozzarella, jamón, huevo, tomate, aceituna y orégano.",68000,,https://images.unsplash.com/photo-1513104890138-7c749659a591?w=200,si,
+estacion,PIZZAS,Pizza Sabor Criollo,"Salsa de tomate, queso mozzarella, chorizo parrillero, aceituna y orégano.",70000,,https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=200,si,
+estacion,PIZZAS,Pizza Salchi Mix,"Salsa de tomate, queso mozzarella, salchicha, aceituna y orégano.",65000,,https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=200,si,
+abuelos,NUESTROS MENÚ,Hambupizza Personal,Deliciosa hambupizza personal. También contamos con lomipizza personal (Gs. 40.000).,35000,,hamburpizza-los-abuelos.jpg,si,
+abuelos,NUESTROS MENÚ,Lomipizza Personal,Exquisita lomipizza tamaño personal.,40000,,hamburpizza-los-abuelos.jpg,si,
+abuelos,NUESTROS MENÚ,Alitas Fritas (Grande),"Crujientes alitas fritas. (Opciones: personal Gs. 30.000, mediano Gs. 55.000)",80000,,hamburpizza-los-abuelos.jpg,si,Alitas Fritas Grande
+abuelos,NUESTROS MENÚ,Alitas Fritas (Personal),Porción personal de alitas fritas.,30000,,hamburpizza-los-abuelos.jpg,si,Alitas Fritas Personal
+abuelos,NUESTROS MENÚ,Alitas Fritas (Mediano),Porción mediana de alitas fritas.,55000,,hamburpizza-los-abuelos.jpg,si,Alitas Fritas Mediano
+abuelos,NUESTROS MENÚ,Bocadito (Grande),Surtido completo de bocaditos. También mediano (Gs. 80.000).,110000,,hamburpizza-los-abuelos.jpg,si,Bocadito Grande
+abuelos,NUESTROS MENÚ,Bocadito Mediano,Surtido mediano de deliciosos bocaditos.,80000,,hamburpizza-los-abuelos.jpg,si,
+abuelos,NUESTROS MENÚ,Pizza Peperoni,Antojo de pizza de peperoni. Borde relleno (Gs. 55.000).,45000,,hamburpizza-los-abuelos.jpg,si,
+abuelos,NUESTROS MENÚ,Pizza Peperoni Borde Relleno,Pizza de peperoni con delicioso borde relleno.,55000,,hamburpizza-los-abuelos.jpg,si,
+abuelos,AÇAI,Açaí Tradicional (Chico - 300ml),"Banana, granola, leche condensada, leche en polvo, açaí.",15000,,acai-practica-lbos.jpg,si,Acai Tradicional Chico
+abuelos,AÇAI,Açaí Tradicional (Mediano - 400ml),"Banana, granola, leche condensada, leche en polvo, açaí.",20000,,acai-practica-lbos.jpg,si,Acai Tradicional Mediano
+abuelos,AÇAI,Açaí Tradicional (Grande - 500ml),"Banana, granola, leche condensada, leche en polvo, açaí.",25000,,acai-practica-lbos.jpg,si,Acai Tradicional Grande
+abuelos,AÇAI,Açaí Frutal (Chico - 300ml),"Kiwi, banana, granola, leche condensada, frutilla, açaí.",15000,,acai-practica-lbos.jpg,si,Acai Frutal Chico
+abuelos,AÇAI,Açaí Frutal (Mediano - 400ml),"Kiwi, banana, granola, leche condensada, frutilla, açaí.",20000,,acai-practica-lbos.jpg,si,Acai Frutal Mediano
+abuelos,AÇAI,Açaí Frutal (Grande - 500ml),"Kiwi, banana, granola, leche condensada, frutilla, açaí.",25000,,acai-practica-lbos.jpg,si,Acai Frutal Grande
+abuelos,AÇAI,Açaí Tres Leches (Chico - 300ml),"Leche condensada, leche en polvo, dulce de leche, açaí.",15000,,acai-practica-lbos.jpg,si,Acai Tres Leches Chico
+abuelos,AÇAI,Açaí Tres Leches (Mediano - 400ml),"Leche condensada, leche en polvo, dulce de leche, açaí.",20000,,acai-practica-lbos.jpg,si,Acai Tres Leches Mediano
+abuelos,AÇAI,Açaí Tres Leches (Grande - 500ml),"Leche condensada, leche en polvo, dulce de leche, açaí.",25000,,acai-practica-lbos.jpg,si,Acai Tres Leches Grande
+abuelos,AÇAI,Açaí Personalizado (Chico - 300ml),"Banana, granola, oreo, nutella, leche condensada, leche en polvo, dulce de leche, açaí.",18000,,acai-practica-lbos.jpg,si,Acai Personalizado Chico
+abuelos,AÇAI,Açaí Personalizado (Mediano - 400ml),"Banana, granola, oreo, nutella, leche condensada, leche en polvo, dulce de leche, açaí.",23000,,acai-practica-lbos.jpg,si,Acai Personalizado Mediano
+abuelos,AÇAI,Açaí Personalizado (Grande - 500ml),"Banana, granola, oreo, nutella, leche condensada, leche en polvo, dulce de leche, açaí.",28000,,acai-practica-lbos.jpg,si,Acai Personalizado Grande
